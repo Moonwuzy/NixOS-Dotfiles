@@ -3,17 +3,11 @@
 {
   imports = [
     ../../modules/common.nix
+    ./hardware-configuration.nix
      ];
 
   # Desktop hostname
   networking.hostName = "mafuyu";
-  
-  # Temporary root filesystem for dry-build testing.
-  # This will be replaced by the real desktop hardware-configuration.nix.
-  fileSystems."/" = {
-    device = "/dev/disk/by-label/NIXOS";
-    fsType = "ext4";
-  };
 
   # NVIDIA RTX 3070
   services.xserver.videoDrivers = [
