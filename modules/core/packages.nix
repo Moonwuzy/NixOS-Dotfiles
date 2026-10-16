@@ -89,6 +89,7 @@
     krita
     usbutils
     zip
+    gh
 
     # Gaming
     wineWow64Packages.stable
