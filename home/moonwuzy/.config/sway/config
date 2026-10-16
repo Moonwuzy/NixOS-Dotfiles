@@ -1,11 +1,19 @@
-exec_always wal -i /home/moonwuzy/Pictures/Wallpapers/violet.jpg
+# Greeter monitor
+exec_always sh -c 'if [ "$USER" = "greeter" ]; then swaymsg output DP-1 disable; swaymsg output DP-2 enable; fi'
+# Wallpaper
+exec ~/.local/bin/wallpaper-restore
 # autotiling
-exec_always autotiling --limit 2
-exec swaync
-# waybar command
-exec_always sh -c 'pkill -x waybar; sleep 0.2; waybar'
+exec autotiling
+# Waybar 
+exec waybar
+# Easy Effects
+exec easyeffects
+# Prefer dark mode for GNOME-aware applications
+exec_always gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
 # Wayland display
 exec_always dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_DATA_DIRS
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -16,29 +24,52 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term kitty -o background_opacity=0.75
+set $term ghostty
+# kitty -o background_opacity=0.75
 # Your preferred application launcher
 set $menu wofi --show drun
 
-### Output configuration
-#
-# Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
-output * bg /home/moonwuzy/Pictures/Wallpapers/violet.jpg fill
+# Output
+output DP-1 pos -2560 0
+output DP-2 pos 0 0
+focus output DP-2
+output DP-2 mode 2560x1440@179.877Hz
+output DP-1 mode 2560x1440@170.071Hz
+output DP-2 adaptive_sync off
+output DP-1 adaptive_sync off
+
+# Cursor
 seat * xcursor_theme Adwaita 28
 
-# SwayFX
+# Sway
 gaps inner 8
 gaps outer 10
+default_border pixel 0
+default_floating_border pixel 0
 
-default_border pixel 2
-default_floating_border pixel 2
-
+# SwayFX
+animation_duration_ms 200
 corner_radius 8
 blur enable
-blur_radius 5
+blur_xray disable
 blur_passes 2
+blur_radius 5
 shadows enable
 shadow_blur_radius 10
+layer_effects "waybar" {
+    blur enable;
+    blur_ignore_transparent enable;
+    shadows enable;
+    corner_radius 18;
+}
+
+
+
+# Keyboard Language
+input type:keyboard {
+    xkb_layout us
+    xkb_variant ""
+}
 
 #
 # Example configuration:
@@ -90,28 +121,47 @@ shadow_blur_radius 10
 
     # Start your launcher
     bindsym $mod+d exec $menu
-   
-    # Desktop edits
-    default_border pixel 0
-    default_floating_border pixel 0
 
     # My keybinds
     bindsym $mod+o exec waypaper
     for_window [app_id="waypaper"] floating enable, move position center   
-    bindsym F11 exec flameshot full
     bindsym $mod+n exec swaync-client -t
-    bindsym $mod+i exec kitty -o background_opacity=0.75 -- yazi
-    bindsym $mod+m exec kitty -o background_opacity=0.75 -- sudo nano /etc/nixos/configuration.nix
-    # Programs 
-    exec steam -silent  
+    bindsym $mod+l exec ghostty -- yazi
+    bindsym $mod+p exec ghostty  -- sudo nano /etc/nixos/home/moonwuzy/.config/sway/config
+    bindsym F11 exec ~/.local/bin/screenshot-full
+    bindsym Print exec ~/.local/bin/screenshot-area
+    bindsym $mod+h exec ~/.config/wofi/help.sh
+    bindsym $mod+b exec ~/.local/bin/wallpaper-picker
+    # Numlock on
+    input type:keyboard xkb_numlock enabled
+    
+    # Mission Center
+    bindsym Ctrl+Alt+Delete exec missioncenter
+    for_window [app_id="missioncenter"] floating enable, sticky enable
+    for_window [app_id="missioncenter"] focus
+
+    # Nepu
+    bindsym $mod+j exec ~/.local/bin/nepu
+    for_window [app_id="nepu"] move to workspace 5
+
+    # Programs
+    exec otd-daemon 						
+    exec steam -silent
+    exec discord
+    assign [app_id="discord"] workspace number 2
+    for_window [app_id="discord"] move to workspace number 2
+
+    # Workspaces Fixed
+    assign [app_id="com.obsproject.Studio"] workspace number 2
+    for_window [app_id="com.obsproject.Studio"] move to workspace number 2
 
     # Drag floating windows by holding down $mod and left mouse button.
-    # Resize them with right mouse button + $mod.
+    # Resize them with right mouse button + $mod	.
     # Despite the name, also works for non-floating windows.
     # Change normal to inverse to use left mouse button for resizing and right
     # mouse button for dragging.
     floating_modifier $mod normal
-
+						
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
@@ -121,15 +171,15 @@ shadow_blur_radius 10
 # Moving around:
 #
     # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
+    #bindsym $mod+$left focus left
+    #bindsym $mod+$down focus down
+    #bindsym $mod+$up focus up
+    #bindsym $mod+$right focus right
     # Or use $mod+[up|down|left|right]
-    bindsym $mod+Left focus left
-    bindsym $mod+Down focus down
-    bindsym $mod+Up focus up
-    bindsym $mod+Right focus right
+    #bindsym $mod+Left focus left
+    #bindsym $mod+Down focus down
+    #bindsym $mod+Up focus up
+    #bindsym $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
     bindsym $mod+Shift+$left move left
@@ -174,13 +224,13 @@ shadow_blur_radius 10
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+   # bindsym $mod+h splith
+   # bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    #bindsym $mod+s layout stacking
+    #bindsym $mod+t layout tabbed
+    #bindsym $mod+x layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
@@ -228,7 +278,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $mod+w mode "resize"
 #
 # Utilities:
 #
@@ -250,9 +300,9 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
     # Special key to take a screenshot with grim
-    bindsym Print exec grim
+    # bindsym Print exec grim
 }
 
 # Includes
 include /etc/sway/config.d/*
-include ~/.config/sway/laptop.conf
+include ~/.config/sway/desktop.conf

@@ -28,7 +28,7 @@
     },
 
     "clock": {
-        "format": "[  {:%H:%M %A, %b %d} ]",
+        "format": "[  {:%I:%M %p %A, %b %d} ]",
         "interval": 3
     },
 

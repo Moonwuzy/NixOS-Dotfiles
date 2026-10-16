@@ -1,0 +1,106 @@
+@import "/home/moonwuzy/.cache/wal/colors-waybar.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 15px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @foreground;
+}
+
+window#waybar > box {
+    background-color: alpha(@background, 0.75);
+    border: 1px solid @color0;
+    border-radius: 18px;
+}
+
+/* Brand */
+
+#custom-brand {
+    color: @foreground;
+    padding: 0 4px;
+    margin: 3px 0;
+}
+
+/* Workspaces */
+
+#workspaces {
+    margin: 3px 6px;
+    padding: 0 4px;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+}
+
+#workspaces button {
+    padding: 3px 12px;
+    margin: 0 1px;
+    color: @foreground;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+}
+
+#workspaces button:hover {
+    color: @foreground;
+    background-color: transparent;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#workspaces button.focused {
+    color: @color4;
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 8px;
+}
+
+#workspaces button.urgent {
+    color: @color1;
+}
+
+/* Clock */
+
+#clock {
+    color: @foreground;
+    padding: 0 4px;
+}
+
+/* Right side */
+
+#cpu,
+#memory,
+#network,
+#custom-help,
+#pulseaudio,
+#battery,
+#backlight,
+#custom-power {
+    color: @foreground;
+    padding: 0 4px;
+    margin: 0;
+}
+
+/* Tray */
+
+#tray {
+    color: @color4;
+    padding-left: 8px;
+    padding-right: 10px;
+    margin-left: 2px;
+}
+
+#tray > .passive {
+    opacity: 0.8;
+}
+
+#tray > .needs-attention {
+    opacity: 1;
+}
+
+#tray > .item {
+    margin: 0 2px;
+}

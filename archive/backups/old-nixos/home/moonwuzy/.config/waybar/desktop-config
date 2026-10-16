@@ -1,0 +1,119 @@
+{
+    "layer": "bottom",
+    "position": "top",
+
+    "height": 30,
+
+    "margin-top": 6,
+    "margin-left": 8,
+    "margin-right": 8,
+
+    "spacing": 3,
+
+    "modules-left": [
+        "custom/brand",
+        "sway/workspaces"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "cpu",
+        "memory",
+        "network",
+        "custom/help",
+        "pulseaudio",
+        "battery",
+        "backlight",
+        "custom/power",
+        "tray"
+    ],
+
+    "custom/brand": {
+        "format": "    iloveyaoi",
+        "tooltip": false
+    },
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{name}",
+        "format-icons": {
+            "default": " ",
+            "focused": "*",
+            "urgent": "!"
+        }
+    },
+
+    "clock": {
+        "format": " {:%I:%M %p %A, %b %d} ",
+        "interval": 1
+    },
+
+    "cpu": {
+        "format": "cpu {usage}% ",
+        "interval": 1
+    },
+
+    "memory": {
+        "format": "ram {percentage}% ",
+        "interval": 1
+    },
+
+    "network": {
+        "format-ethernet": " 󰈀 ",
+        "format-wifi": " 󰖩 ",
+        "format-disconnected": " 󰖪 ",
+        "tooltip-format": "{ifname} · {ipaddr}",
+        "interval": 1
+    },
+
+    "custom/help": {
+        "format": " 󰋖 ",
+        "tooltip": "Sway Help",
+        "on-click": "/home/moonwuzy/.config/wofi/help.sh"
+    },
+
+    "pulseaudio": {
+        "max-volume": 100,
+        "format": " 󰕾 {volume}% ",
+        "format-muted": " 󰖁 muted ",
+        "on-click": "pavucontrol",
+        "scroll-step": 2
+    },
+
+    "battery": {
+        "format": "{icon} {capacity}% ",
+        "format-charging": "󰂄 {capacity}% ",
+        "format-icons": [
+            "󰂃",
+            "󰁺",
+            "󰁼",
+            "󰁾",
+            "󰂀",
+            "󰁹"
+        ]
+    },
+
+    "backlight": {
+        "format": "󰃠 ",
+        "on-click": "brightnessctl set 5%+",
+        "on-scroll-up": "brightnessctl set 5%+",
+        "on-scroll-down": "brightnessctl set 5%-"
+    },
+
+    "custom/power": {
+        "format": " ⏻ ",
+        "tooltip": "Power Menu",
+        "on-click": "/run/current-system/sw/bin/wlogout"
+    },
+
+    "tray": {
+        "icon-size": 20,
+        "spacing": 6,
+        "show-passive-items": true,
+        "tooltip": false
+    }
+}

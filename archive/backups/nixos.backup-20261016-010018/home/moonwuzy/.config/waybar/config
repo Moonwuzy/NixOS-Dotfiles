@@ -1,0 +1,69 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "height": 30,
+    "spacing": 0,
+
+    "modules-left": ["sway/workspaces", "sway/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray","sway/language", "pulseaudio", "battery", "backlight","custom/power"],
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "format": "{icon}{name}",
+        "format-icons": {
+            "default": " ",
+            "urgent": "!",
+            "focused": "*"
+        }
+    },
+
+    "sway/window": {
+        "format": "| {}",
+        "max-lenth": 80,
+        "rewrite": {
+            "(.*) - Vivaldi": "| Vivaldi",
+            "(.*) - Discord": "| Discord"
+         }
+    },
+
+    "clock": {
+        "format": "[  {:%I:%M %p %A, %b %d} ]",
+        "interval": 3
+    },
+
+    "sway/language": {
+        "format": "[ <b>key: </b>{short} / ",
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "max-volume": 100,
+        "format": "<b> vol:</b> {volume}%",
+        "format-muted": "<b>vol:</b> {volume}% (m)"
+    },
+
+    "battery": {
+        "format": " / <b>bat:</b> {capacity}%",
+        "format-charging": " / <b>ac:</b> {capacity}%",
+        "tooltip": false,
+        "interval": 20
+    },
+
+    "backlight": {
+        "format": " / <b>mon:</b> {percent}% ]",
+        "tooltip": false
+    },
+
+    "tray": {
+        "icon-size": 20,
+        "spacing": 7,
+        "tooltip": false
+    },
+
+    "custom/power": {
+       "format": " ⏻  ",
+       "tooltip": "Power Menu",
+       "on-click": "/run/current-system/sw/bin/wlogout"
+    }
+}

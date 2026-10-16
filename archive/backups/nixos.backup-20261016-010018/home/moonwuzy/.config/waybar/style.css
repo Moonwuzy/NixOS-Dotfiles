@@ -1,0 +1,72 @@
+@import "/home/moonwuzy/.cache/wal/colors-waybar.css";
+
+* {
+    font-size: 22px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: @background;
+    border-bottom: 1px solid @color0;
+    color: @foreground;
+}
+
+#window {
+    padding: 0 14px;
+    border-radius: 8px
+    margin: 4px 6px;
+    font-family: "JetBrainsMono Nerd Font";
+    color: @foreground;
+}
+
+#language,
+#pulseaudio,
+#battery,
+#backlight,
+#clock {
+    font-family: "JetBrainsMono Nerd Font";
+    color: @foreground;
+}
+
+#language b,
+#pulseaudio b,
+#battery b,
+#backlight b {
+    color: @color4;
+}
+
+#clock {
+    color: @foreground;
+}
+
+#workspaces {
+    font-family: "JetBrainsMono Nerd Font";
+    border-bottom: 1px solid @color0;
+}
+
+#workspaces button {
+    padding: 7px 12px;
+    color: @foreground;
+    background-color: @background;
+    border: none;
+}
+
+#workspaces button:hover {
+    background: none;
+    border: none;
+    border-color: transparent;
+    transition: none;
+}
+
+#workspaces button.focused {
+    border-radius: 0;
+    color: @color4;
+    font-weight: bold;
+}
+
+#tray {
+    font-family: "JetBrainsMono Nerd Font";
+    color: @color4;
+    padding-right: 5px;
+    padding-left: 10px;
+}

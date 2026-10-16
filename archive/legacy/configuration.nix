@@ -25,7 +25,7 @@
       sway.enable = true;
     };
   };
-
+ 
   # Backlight fix
   boot.kernelParams = [
   "i915.enable_dpcd_backlight=1"
@@ -46,7 +46,7 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
+ 
   networking.hostName = "yaoilover"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -69,19 +69,6 @@
   powerOnBoot = true;
   };
   services.blueman.enable = true;
-
-  # Greeter
-  programs.dconf.enable = true;
-
-  services.greetd = {
-  enable = true;
-  settings = {
-    default_session = {
-      command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd 'sway --unsupported-gpu'";
-      user = "greeter";
-    };
-    };
-    };
 
   security.polkit.enable = true;
   security.pam.services.swaylock = {};
@@ -138,13 +125,6 @@
 
   # --- Programs ---
                                                                                        
-  # SwayFX Enhanced
-  programs.sway = {
-  enable = true;
-  package = pkgs.swayfx;
-  wrapperFeatures.gtk = true;
-  };
-
   # Thunar
   programs.xfconf.enable = true;
   programs.thunar = {

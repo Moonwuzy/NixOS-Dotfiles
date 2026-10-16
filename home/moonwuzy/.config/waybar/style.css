@@ -13,8 +13,8 @@ window#waybar {
 
 #window {
     padding: 0 14px;
+    border-radius: 8px
     margin: 4px 6px;
-    border-radius: 8px;
     font-family: "JetBrainsMono Nerd Font";
     color: @foreground;
 }
