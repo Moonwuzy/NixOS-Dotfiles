@@ -1,0 +1,11 @@
+{
+  "colorscheme": "mrmonokai",
+  "truecolor": "auto",
+  "background": "default",
+  "mouse": true,
+  "statusline": true,
+  "ruler": true,
+  "softwrap": false,
+  "tabsize": 2,
+  "syntax": true
+}

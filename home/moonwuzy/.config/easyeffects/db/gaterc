@@ -1,0 +1,6 @@
+[sie][Gate#0]
+attack=5
+bypass=true
+curveThreshold=-45
+reduction=-18
+release=250

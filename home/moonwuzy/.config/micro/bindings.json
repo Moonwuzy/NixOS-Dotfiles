@@ -1,0 +1,9 @@
+{
+"Ctrl-s": "Save",
+"Ctrl-x": "Quit",
+"Ctrl-w": "Find",
+"Ctrl-k": "CutLine",
+"Ctrl-u": "Undo",
+"Ctrl-q": "Quit",
+"Ctrl-s": "Save"
+}

@@ -1,0 +1,7 @@
+[sie][Expander#0]
+attack=10
+mode=0
+ratio=2
+release=150
+sidechainToLink=-80
+threshold=-40
