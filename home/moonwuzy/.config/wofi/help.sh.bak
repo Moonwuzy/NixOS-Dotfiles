@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+
+entries=(
+"KEYBINDS"
+"────────────────────────────────────────────"
+"SUPER + ENTER       → Terminal"
+"SUPER + Q           → Close window"
+"SUPER + D           → App launcher"
+"SUPER + H           → Help menu"
+"SUPER + B           → Sway config"
+"SUPER + L           → Yazi"
+"SUPER + N           → Notifications"
+"SUPER + O           → Waypaper"
+"SUPER + F           → Fullscreen"
+"SUPER + SPACE       → Floating / tiling"
+"SUPER + W           → Resize mode"
+"SUPER + SHIFT + C   → Reload Sway"
+"SUPER + SHIFT + E   → Exit Sway"
+""
+"SUPER + 1-0         → Switch workspace"
+"SUPER + SHIFT + 1-0 → Move window"
+""
+"WORKSPACES"
+"────────────────────────────────────────────"
+"SUPER + 1-0         Switch workspace"
+"SUPER + SHIFT + 1-0 Move window"
+""
+"CONFIG FILES"
+"────────────────────────────────────────────"
+"Sway       /etc/nixos/home/moonwuzy/.config/sway/config"
+"Waybar     ~/.config/waybar/"
+"Wofi       ~/.config/wofi/"
+"Kitty      ~/.config/kitty/"
+"NixOS      /etc/nixos/configuration.nix"
+"Wallpapers ~/Pictures/Wallpapers/"
+""
+"STORAGE"
+"────────────────────────────────────────────"
+"HARD DRIVE /mnt/Violet/"
+""
+"COMMANDS"
+"────────────────────────────────────────────"
+"Reload     swaymsg reload"
+"Rebuild    sudo nixos-rebuild switch --flake /etc/nixos#desktop"
+)
+
+selected=$(printf '%s\n' "${entries[@]}" | wofi \
+    --dmenu \
+    --prompt "Help" \
+    --width 650 \
+    --height 600 \
+    --cache-file /dev/null)
+
+[ -z "$selected" ] && exit 0
+
+case "$selected" in
+    "Sway"*)       value="/etc/nixos/home/moonwuzy/.config/sway/config" ;;
+    "Waybar"*)     value="~/.config/waybar/" ;;
+    "Wofi"*)       value="~/.config/wofi/" ;;
+    "Kitty"*)      value="~/.config/kitty/" ;;
+    "NixOS"*)      value="/etc/nixos/configuration.nix" ;;
+    "Wallpapers"*) value="~/Pictures/Wallpapers/" ;;
+    "HARD DRIVE"*) value="/mnt/Violet/" ;;
+    "Reload"*)     value="swaymsg reload" ;;
+    "Rebuild"*)    value="sudo nixos-rebuild switch --flake /etc/nixos#desktop" ;;
+    *) exit 0 ;;
+esac
+
+printf '%s' "$value" | wl-copy
+notify-send "Copied" "$value"
