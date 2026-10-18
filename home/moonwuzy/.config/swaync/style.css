@@ -1,0 +1,204 @@
+
+@import url("file:///home/moonwuzy/.config/swaync/wal-colors.css");
+
+/* Overall typography */
+* {
+  font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", sans-serif;
+  font-size: 13px;
+  transition: 150ms ease;
+}
+
+/* Notification window */
+.control-center,
+.control-center-list,
+.floating-notifications {
+  background: transparent;
+  color: @wal_fg;
+}
+
+/* Translucent control-center surface */
+.control-center {
+  background: alpha(@wal_bg, 0.90);
+  border: 1px solid alpha(@wal_5, 0.60);
+  border-radius: 18px;
+  padding: 10px;
+}
+
+/* Individual notifications */
+.notification {
+  background: alpha(@wal_bg, 0.94);
+  color: @wal_fg;
+  border: 1px solid alpha(@wal_4, 0.35);
+  border-radius: 14px;
+  margin: 5px;
+  padding: 8px;
+  box-shadow: none;
+}
+
+.notification:hover {
+  background: alpha(@wal_4, 0.18);
+  border-color: alpha(@wal_5, 0.8);
+}
+
+.notification-content {
+  background: transparent;
+  padding: 4px;
+}
+
+.notification-default-action,
+.notification-action {
+  background: transparent;
+  color: @wal_fg;
+  border: none;
+  border-radius: 9px;
+}
+
+.notification-action:hover {
+  background: alpha(@wal_5, 0.25);
+}
+
+.summary {
+  color: @wal_fg;
+  font-weight: bold;
+}
+
+.body {
+  color: alpha(@wal_fg, 0.88);
+}
+
+.time {
+  color: @wal_4;
+  font-size: 11px;
+}
+
+/* Application icons: preserve their original rendering */
+.notification image,
+.notification icon {
+  -gtk-icon-style: regular;
+  -gtk-icon-shadow: none;
+}
+
+/* Header and clear button */
+.widget-title {
+  color: @wal_fg;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 6px 4px 12px;
+}
+
+.widget-title > button {
+  background: alpha(@wal_4, 0.20);
+  color: @wal_fg;
+  border: 1px solid alpha(@wal_4, 0.35);
+  border-radius: 9px;
+  padding: 7px 12px;
+  box-shadow: none;
+}
+
+.widget-title > button:hover {
+  background: alpha(@wal_5, 0.30);
+}
+
+/* Do Not Disturb */
+.widget-dnd {
+  background: alpha(@wal_fg, 0.045);
+  border-radius: 12px;
+  padding: 10px;
+  margin: 4px;
+}
+
+.widget-dnd > switch {
+  background: alpha(@wal_fg, 0.18);
+  border: 1px solid alpha(@wal_4, 0.4);
+}
+
+.widget-dnd > switch:checked {
+  background: @wal_5;
+}
+
+.widget-dnd > switch slider {
+  background: @wal_fg;
+  border-radius: 99px;
+}
+
+/* Volume slider */
+.widget-volume {
+  background: alpha(@wal_fg, 0.045);
+  border-radius: 12px;
+  padding: 12px;
+  margin: 4px;
+}
+
+.widget-volume label {
+  color: @wal_fg;
+}
+
+.widget-volume trough,
+.widget-volume scale trough {
+  background: alpha(@wal_fg, 0.15);
+  border-radius: 99px;
+  min-height: 6px;
+}
+
+.widget-volume highlight,
+.widget-volume scale highlight {
+  background: @wal_5;
+  border-radius: 99px;
+}
+
+.widget-volume slider,
+.widget-volume scale slider {
+  background: @wal_fg;
+  border: 2px solid @wal_5;
+  min-width: 13px;
+  min-height: 13px;
+  border-radius: 99px;
+}
+
+/* Quick-action buttons */
+.widget-buttons-grid {
+  padding: 5px 2px;
+  margin: 2px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  background: alpha(@wal_fg, 0.06);
+  color: @wal_fg;
+  border: 1px solid alpha(@wal_4, 0.30);
+  border-radius: 12px;
+  min-height: 46px;
+  padding: 8px;
+  box-shadow: none;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+  background: alpha(@wal_5, 0.20);
+  border-color: @wal_5;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:checked,
+.widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked {
+  background: alpha(@wal_5, 0.36);
+  border-color: @wal_5;
+  color: @wal_fg;
+}
+
+/* Notification list and scrollbars */
+.control-center-list {
+  background: transparent;
+}
+
+.notification-group {
+  background: transparent;
+}
+
+scrollbar slider {
+  background: alpha(@wal_4, 0.45);
+  border-radius: 99px;
+  min-width: 5px;
+  min-height: 20px;
+}
+
+.blank-window {
+  background: transparent;
+}
