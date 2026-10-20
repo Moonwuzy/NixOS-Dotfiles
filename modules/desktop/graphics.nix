@@ -18,12 +18,12 @@
     modesetting.enable = true;
 
     # RTX 3070 supports NVIDIA's open kernel modules
-    open = true;
+    open = false;
 
     # Keep power management simple while troubleshooting
     powerManagement.enable = false;
     powerManagement.finegrained = false;
-    forceFullCompositionPipeline = true;
+  # forceFullCompositionPipeline = true;
 
     nvidiaSettings = true;
 
