@@ -77,8 +77,15 @@
   services.gvfs.enable = true;
   services.tumbler.enable = true;
   services.gnome.gnome-keyring.enable = true;
-  programs.dconf.enable = true;
+  
+  services.lact.enable = true;
 
+  services.scx = {
+  enable = true;
+  scheduler = "scx_rustland";
+  };
+   
+  programs.dconf.enable = true;
   programs.xfconf.enable = true;
   programs.thunar = {
     enable = true;

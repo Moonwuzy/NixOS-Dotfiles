@@ -10,6 +10,7 @@
     ../../modules/core/audio.nix
     ../../modules/core/services.nix
     ../../modules/core/sway.nix
+    ../../modules/core/niri.nix
     ../../modules/core/gaming.nix
     ../../modules/core/packages.nix
     ../../modules/laptop/asus.nix

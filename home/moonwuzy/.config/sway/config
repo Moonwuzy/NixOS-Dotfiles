@@ -48,7 +48,6 @@ default_border pixel 0
 default_floating_border pixel 0
 
 # SwayFX
-animation_duration_ms 200
 corner_radius 8
 blur enable
 blur_xray disable
@@ -122,12 +121,8 @@ input type:keyboard {
     # Start your launcher
     bindsym $mod+d exec $menu
 
-    # My keybinds
-    bindsym $mod+o exec waypaper
-    for_window [app_id="waypaper"] floating enable, move position center   
+    # My keybinds   
     bindsym $mod+n exec swaync-client -t
-    bindsym $mod+l exec ghostty -- yazi
-    bindsym $mod+p exec ghostty  -- sudo nano /etc/nixos/home/moonwuzy/.config/sway/config
     bindsym F11 exec ~/.local/bin/screenshot-full
     bindsym Print exec ~/.local/bin/screenshot-area
     bindsym $mod+h exec ~/.config/wofi/help.sh

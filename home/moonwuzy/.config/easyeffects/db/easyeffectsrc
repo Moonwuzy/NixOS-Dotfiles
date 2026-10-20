@@ -8,9 +8,9 @@ visiblePlugin=autogain#0
 [StreamOutputs]
 outputDevice=alsa_output.usb-PreSonus_Audio_AudioBox_USB-01.analog-stereo
 useDefaultOutputDevice=false
+visiblePage=pluginsPage
 
 [Window]
-height=1363
+height=1367
 noWindowAfterStarting=true
-visiblePage=inputPage
-width=2524
+width=1258

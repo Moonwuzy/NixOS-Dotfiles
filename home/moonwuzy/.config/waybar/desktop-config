@@ -1,13 +1,10 @@
 {
     "layer": "bottom",
     "position": "top",
-
     "height": 30,
-
     "margin-top": 6,
     "margin-left": 8,
     "margin-right": 8,
-
     "spacing": 3,
 
     "modules-left": [
@@ -22,17 +19,18 @@
     "modules-right": [
         "cpu",
         "memory",
+        "custom/gpu",
         "network",
         "custom/help",
+        "tray",
         "pulseaudio",
         "battery",
         "backlight",
-        "custom/power",
-        "tray"
+        "custom/power"
     ],
 
     "custom/brand": {
-        "format": "    iloveyaoi",
+        "format": "   私はBLが大好きです"  ,
         "tooltip": false
     },
 
@@ -51,28 +49,28 @@
         "format": " {:%I:%M %p %A, %b %d} ",
         "interval": 1
     },
+    
+"cpu": {
+    "format": "󰻠 {usage}%",
+    "interval": 1,
+    "tooltip": true
+},
 
-    "cpu": {
-        "format": "cpu {usage}% ",
-        "interval": 1
-    },
+"memory": {
+    "format": "󰍛 {percentage}%",
+    "interval": 1,
+    "tooltip": true
+},
 
-    "memory": {
-        "format": "ram {percentage}% ",
-        "interval": 1
-    },
-
-    "network": {
-        "format-ethernet": " 󰈀 ",
-        "format-wifi": " 󰖩 ",
-        "format-disconnected": " 󰖪 ",
-        "tooltip-format": "{ifname} · {ipaddr}",
-        "interval": 1
-    },
-
+"custom/gpu": {
+    "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+    "format": "󰢮 {}%",
+    "interval": 2,
+    "tooltip": "NVIDIA GPU utilization",
+    "return-type": "text"
+},    
     "custom/help": {
         "format": " 󰋖 ",
-        "tooltip": "Sway Help",
         "on-click": "/home/moonwuzy/.config/wofi/help.sh"
     },
 
@@ -105,15 +103,13 @@
     },
 
     "custom/power": {
-        "format": " ⏻ ",
-        "tooltip": "Power Menu",
+        "format": "  ",
         "on-click": "/run/current-system/sw/bin/wlogout"
     },
 
     "tray": {
         "icon-size": 20,
         "spacing": 6,
-        "show-passive-items": true,
-        "tooltip": false
-    }
+        "show-passive-items": true
+        }
 }

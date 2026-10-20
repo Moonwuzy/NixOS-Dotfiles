@@ -10,11 +10,13 @@
     ../../modules/core/audio.nix
     ../../modules/core/services.nix
     ../../modules/core/sway.nix
+    ../../modules/core/niri.nix
     ../../modules/core/gaming.nix
     ../../modules/core/packages.nix
     ../../modules/desktop/zram.nix
     ../../modules/desktop/swap.nix
     ../../modules/desktop/graphics.nix
+    ../../modules/core/virtualization.nix
   ];
 
   networking.hostName = "mafuyu";
@@ -42,6 +44,11 @@
   };
 
   home-manager.users.moonwuzy = {
+    
+  home.sessionVariables = {
+  NIXOS_OZONE_WL = "1";
+  };
+
     xdg.configFile."sway/desktop.conf".text = ''
       # Cursor
       seat * xcursor_theme Adwaita 20
@@ -57,6 +64,6 @@
       lib.mkForce ../../home/moonwuzy/.config/wofi/desktop-style.css;
 
     xdg.configFile."kitty/kitty.conf".source =
-      lib.mkForce ../../home/moonwuzy/.config/kitty/desktop-kitty.conf;
+      lib.mkForce ../../home/moonwuzy/.config/kitty/kitty.conf;   
   };
 }

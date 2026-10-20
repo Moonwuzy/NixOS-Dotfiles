@@ -8,6 +8,7 @@
   environment.systemPackages = with pkgs; [
     wget
     curl
+    
 
     # Desktop
     vivaldi
@@ -15,6 +16,7 @@
     waybar
     discord
     wofi
+    eww
     yazi
     wlogout
     pavucontrol
@@ -39,10 +41,12 @@
 
     # Media
     cmus
+    mprisence
     nicotine-plus
     cava
     mpv
     spotify
+    spotatui
 
     # Appearance
     pywal
@@ -90,19 +94,25 @@
     usbutils
     zip
     gh
+    alsa-lib
+    openssl
 
     # Gaming
     wineWow64Packages.stable
     winetricks
+    protontricks
+    protonplus
     vulkan-loader
     vulkan-tools
     pcsx2
     dolphin-emu
     mangohud
+    mangojuice
     itch
     sameboy
-    steamtinkerlaunch
     protontricks
+    faugus-launcher
+    osu-lazer-bin
 
     # Music
     ardour
@@ -113,6 +123,7 @@
 
     # Development
     git
+    lazygit
 
     # VR
     unityhub

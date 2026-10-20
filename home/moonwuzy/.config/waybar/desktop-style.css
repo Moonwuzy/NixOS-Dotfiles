@@ -74,14 +74,19 @@ window#waybar > box {
 #cpu,
 #memory,
 #network,
+#custom-gpu,
 #custom-help,
-#pulseaudio,
+#tray,
 #battery,
-#backlight,
-#custom-power {
+#pulseaudio,
+#backlight {
+
     color: @foreground;
+    background-color: alpha(@background, 0.75);
+    border: 1px solid @color0;
+    border-radius: 10px;
     padding: 0 4px;
-    margin: 0;
+    margin: 3px 3px;
 }
 
 /* Tray */
@@ -103,4 +108,36 @@ window#waybar > box {
 
 #tray > .item {
     margin: 0 2px;
+}
+
+#custom-power {
+    color: @foreground;
+    background-color: alpha(@background, 0.75);
+    border: 1px solid @color0;
+    border-radius: 10px;
+    min-height: 0;
+    padding: 0 8px;
+    margin: 3px 3px 3px 3px;
+    box-shadow: none;
+}
+
+#custom-power:hover {
+    background-color: alpha(@color4, 0.40);
+    color: @foreground;
+}
+
+/* Tooltips */
+
+tooltip {
+    background-color: @background;
+    color: @foreground;
+    border: 1px solid @color0;
+    border-radius: 10px;
+    padding: 0 4px;
+    margin: 3px 3px;
+    
+}
+
+tooltip label {
+    color: @foreground;
 }
