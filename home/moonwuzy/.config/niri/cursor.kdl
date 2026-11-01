@@ -1,0 +1,9 @@
+// Managed by the Noctalia cursor plugin - edits here are overwritten.
+cursor {
+    xcursor-theme "Posy_Cursor"
+    xcursor-size 32
+}
+environment {
+    XCURSOR_THEME "Posy_Cursor"
+    XCURSOR_SIZE "32"
+}

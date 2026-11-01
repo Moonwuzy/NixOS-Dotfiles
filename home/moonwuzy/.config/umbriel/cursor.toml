@@ -1,0 +1,10 @@
+# Managed by the Noctalia cursor plugin - edits here are overwritten.
+[input.cursor]
+theme = "Posy_Cursor"
+size = 32
+hide_when_typing = false
+hide_timeout_ms = 0
+
+[environment]
+XCURSOR_THEME = "Posy_Cursor"
+XCURSOR_SIZE = "32"

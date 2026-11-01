@@ -1,0 +1,241 @@
+
+// ── Outputs ────────────────────────────────────────────────
+output "DP-1" {
+    mode "2560x1440@170.071"
+    position x=-2560 y=0
+}
+
+output "DP-2" {
+    mode "2560x1440@179.877"
+    position x=0 y=0
+    focus-at-startup
+}
+
+// ── Input ──────────────────────────────────────────────────
+input {
+    focus-follows-mouse max-scroll-amount="33%"
+
+    keyboard {
+        xkb {
+            layout "us"
+            options ""
+        }
+        numlock
+    }
+
+    mouse {}
+    touchpad
+    trackpoint
+}
+
+// ── Window Rules ───────────────────────────────────────────
+window-rule {
+    match app-id="steam" title=r"^notificationtoasts_\d+_desktop$"
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+    open-focused false
+}
+
+// ── Layout ─────────────────────────────────────────────────
+layout {
+    gaps 18
+
+    struts {
+        left 10
+        right 10
+        top 10
+        bottom 10
+    }
+
+    focus-ring {
+        off
+        width 2
+    }
+
+    border {
+        off
+        width 2
+        active-color "#57e389"
+        inactive-color "#7fc8ff"
+    }
+
+    shadow {}
+    default-column-display "normal"
+}
+
+// ── Appearance ─────────────────────────────────────────────
+prefer-no-csd
+
+cursor {
+    xcursor-theme "Posy_Cursor"
+    xcursor-size 32
+}
+
+blur {
+    passes 2
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+// ── Startup Applications ───────────────────────────────────
+spawn-at-startup "bash" "-c" "wl-paste --type text --watch cliphist store"
+spawn-at-startup "bash" "-c" "wl-paste --type image --watch cliphist store"
+
+spawn-at-startup "systemctl" "--user" "enable" "--now" "easyeffects"
+spawn-at-startup "easyeffects"
+spawn-at-startup "otd-daemon"
+spawn-at-startup "steam" "-silent"
+
+spawn-sh-at-startup "python3 /home/moonwuzy/.config/niri/scripts/niri_tilemod.py"
+
+spawn-sh-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_DATA_DIRS"
+
+// Noctalia is started through its Home Manager systemd service.
+// Do not spawn Serpantinum or Noctalia manually here.
+
+// ── Animations ─────────────────────────────────────────────
+animations {
+    slowdown 0.6000000000000001
+
+    workspace-switch {
+        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+    }
+
+    window-open {
+        duration-ms 180
+        curve "ease-out-expo"
+    }
+
+    window-close {
+        duration-ms 150
+        curve "ease-out-quad"
+    }
+
+    horizontal-view-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    window-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    window-resize {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+}
+
+// ── Window Effects ─────────────────────────────────────────
+window-rule {
+    geometry-corner-radius 8
+    clip-to-geometry true
+}
+
+window-rule {
+    geometry-corner-radius 1
+    clip-to-geometry true
+    draw-border-with-background false
+
+    background-effect {
+        blur true
+    }
+}
+
+// ── Key Bindings ───────────────────────────────────────────
+binds {
+    // Applications
+    Mod+Return { spawn "kitty"; }
+    Mod+J { spawn "~/.local/bin/nepu"; }
+    Ctrl+Alt+Delete { spawn "missioncenter"; }
+
+    // Noctalia
+    Mod+D { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
+    Mod+K { spawn "noctalia" "msg" "panel-toggle" "wallpaper"; }
+    Mod+Shift+C { spawn "noctalia" "msg" "panel-toggle" "clipboard"; }
+    Mod+M { spawn "noctalia" "msg" "panel-toggle" "control-center" "media"; }
+    Mod+Shift+W { spawn "noctalia" "msg" "panel-toggle" "noctalia/wallhaven:browser"; }
+    Mod+N { spawn "noctalia" "msg" "panel-toggle" "control-center"; }
+    Mod+Shift+V { spawn "noctalia" "msg" "panel-toggle" "control-center" "audio"; }
+    Mod+Shift+S { spawn "noctalia" "msg" "panel-toggle" "mindnbytes/nix-status:details"; }
+    Print { spawn-sh "noctalia msg screenshot-region"; }
+    Mod+Print { spawn-sh "noctalia msg screenshot-fullscreen"; }
+
+    // Window management
+    Mod+Shift+F { fullscreen-window; }
+    Mod+Q { close-window; }
+    Mod+F { maximize-column; }
+    Mod+Shift+Space { toggle-window-floating; }
+    Mod+Shift+E { quit; }
+
+    // Focus between windows/columns
+    Mod+Z { focus-column-left; }
+    Mod+X { focus-column-right; }
+    Mod+C { focus-window-up; }
+    Mod+V { focus-window-down; }
+
+    // Move windows
+    Mod+Shift+H { move-column-left; }
+    Mod+Shift+L { move-column-right; }
+    Mod+Shift+K { move-window-up; }
+    Mod+Shift+J { move-window-down; }
+
+    // Arrow-key alternatives
+    Mod+Left { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+Up { focus-window-up; }
+    Mod+Down { focus-window-down; }
+
+    Mod+Shift+Left { move-column-left; }
+    Mod+Shift+Right { move-column-right; }
+    Mod+Shift+Up { move-window-up; }
+    Mod+Shift+Down { move-window-down; }
+
+    // Workspaces 1–10
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+0 { focus-workspace 10; }
+
+    // Move focused column to workspace
+    Mod+Shift+1 { move-column-to-workspace 1; }
+    Mod+Shift+2 { move-column-to-workspace 2; }
+    Mod+Shift+3 { move-column-to-workspace 3; }
+    Mod+Shift+4 { move-column-to-workspace 4; }
+    Mod+Shift+5 { move-column-to-workspace 5; }
+    Mod+Shift+6 { move-column-to-workspace 6; }
+    Mod+Shift+7 { move-column-to-workspace 7; }
+    Mod+Shift+8 { move-column-to-workspace 8; }
+    Mod+Shift+9 { move-column-to-workspace 9; }
+    Mod+Shift+0 { move-column-to-workspace 10; }
+
+    Mod+W { toggle-overview; }
+
+    // Audio
+    XF86AudioMute { spawn "pactl" "set-sink-mute" "@DEFAULT_SINK@" "toggle"; }
+    XF86AudioLowerVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "-5%"; }
+    XF86AudioRaiseVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+5%"; }
+    XF86AudioMicMute { spawn "pactl" "set-source-mute" "@DEFAULT_SOURCE@" "toggle"; }
+
+    // Media playback
+    XF86AudioPlay { spawn "playerctl" "play-pause"; }
+    XF86AudioPause { spawn "playerctl" "play-pause"; }
+    XF86AudioPrev { spawn "playerctl" "previous"; }
+    XF86AudioNext { spawn "playerctl" "next"; }
+    XF86AudioStop { spawn "playerctl" "stop"; }
+
+    // Screen brightness
+    XF86MonBrightnessDown { spawn "brightnessctl" "set" "5%-"; }
+    XF86MonBrightnessUp { spawn "brightnessctl" "set" "5%+"; }
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}

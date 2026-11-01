@@ -1,0 +1,223 @@
+
+ // ── Outputs ────────────────────────────────────────────────
+output "DP-1" {
+    mode "2560x1440@170.071"
+    position x=-2560 y=0
+}
+
+output "DP-2" {
+    mode "2560x1440@179.877"
+    position x=0 y=0
+    focus-at-startup
+}
+
+// ── Input ──────────────────────────────────────────────────
+input {
+    keyboard {
+        xkb {
+            layout "us"
+            options ""
+        }
+        numlock
+    }
+
+    // Keep the Adwaita cursor consistent with Sway.
+    // These are the Niri equivalents of the Sway cursor settings.
+    mouse {}
+}
+
+
+// Window Rules
+
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+    open-focused false
+}
+
+// ── Layout ─────────────────────────────────────────────────
+layout {
+
+    gaps 8
+    // Approximate Sway's outer gaps.
+    struts {
+        left 10
+        right 10
+        top 10
+        bottom 10
+    }
+
+    focus-ring {
+        off
+    }
+
+    border {
+        off
+    }
+}  
+
+// ── Appearance ─────────────────────────────────────────────
+prefer-no-csd
+
+cursor {
+    xcursor-theme "Adwaita"
+    xcursor-size 28
+}
+
+blur {
+    passes 2
+    // Niri's blur is not identical to SwayFX's blur.
+}
+
+// ── Startup applications ───────────────────────────────────
+spawn-at-startup "~/.local/bin/wallpaper-restore"
+spawn-at-startup "waybar"
+spawn-at-startup "easyeffects"
+spawn-at-startup "otd-daemon"
+spawn-at-startup "steam" "-silent"
+spawn-at-startup "discord"
+spawn-sh-at-startup "python3 /home/moonwuzy/.config/niri/scripts/niri_tilemod.py"
+spawn-sh-at-startup "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"
+spawn-sh-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_DATA_DIRS"
+
+// -- Animations --
+animations {
+    slowdown 0.8
+
+    workspace-switch {
+        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+    }
+
+    window-open {
+        duration-ms 180
+        curve "ease-out-expo"
+    }
+
+    window-close {
+        duration-ms 150
+        curve "ease-out-quad"
+    }
+
+    horizontal-view-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    window-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    window-resize {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+}
+
+// Edits
+window-rule {
+    geometry-corner-radius 8
+    clip-to-geometry true
+}
+
+window-rule {
+    geometry-corner-radius 8
+    clip-to-geometry true
+
+    background-effect {
+        blur true
+    }
+}
+
+layer-rule {
+    match namespace="^waybar$"
+
+    background-effect {
+        blur true
+    }
+}
+
+
+
+// ── Key bindings ───────────────────────────────────────────
+binds {
+    // Applications
+    Mod+Return { spawn "kitty"; }
+    Mod+E { spawn "thunar"; }
+    Mod+D { spawn "wofi" "--show" "drun"; }
+    Mod+N { spawn "swaync-client" "-t"; }
+    F11 { spawn "~/.local/bin/screenshot-full"; }
+    Print { spawn "~/.local/bin/screenshot-area"; }
+    Mod+H { spawn "~/.config/wofi/help.sh"; }
+    Mod+B { spawn "~/.local/bin/wallpaper-picker"; }
+    Mod+J { spawn "~/.local/bin/nepu"; }
+    Ctrl+Alt+Delete { spawn "missioncenter"; }
+
+    // Window management
+    Mod+Q { close-window; }
+    Mod+F { maximize-column; }
+    Mod+Shift+Space { toggle-window-floating; }
+    Mod+Shift+E { quit; }
+
+    // Focus between windows/columns
+    Mod+Z { focus-column-left; }
+    Mod+X { focus-column-right; }
+    Mod+C { focus-window-up; }
+    Mod+V { focus-window-down; }
+
+    // Move windows
+    Mod+Shift+H { move-column-left; }
+    Mod+Shift+L { move-column-right; }
+    Mod+Shift+K { move-window-up; }
+    Mod+Shift+J { move-window-down; }
+
+    // Arrow-key alternatives
+    Mod+Left { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+Up { focus-window-up; }
+    Mod+Down { focus-window-down; }
+
+    Mod+Shift+Left { move-column-left; }
+    Mod+Shift+Right { move-column-right; }
+    Mod+Shift+Up { move-window-up; }
+    Mod+Shift+Down { move-window-down; }
+
+    // Workspaces 1–10
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+0 { focus-workspace 10; }
+
+    // Move the focused column to a workspace
+    Mod+Shift+1 { move-column-to-workspace 1; }
+    Mod+Shift+2 { move-column-to-workspace 2; }
+    Mod+Shift+3 { move-column-to-workspace 3; }
+    Mod+Shift+4 { move-column-to-workspace 4; }
+    Mod+Shift+5 { move-column-to-workspace 5; }
+    Mod+Shift+6 { move-column-to-workspace 6; }
+    Mod+Shift+7 { move-column-to-workspace 7; }
+    Mod+Shift+8 { move-column-to-workspace 8; }
+    Mod+Shift+9 { move-column-to-workspace 9; }
+    Mod+Shift+0 { move-column-to-workspace 10; }
+    Mod+W { toggle-overview; }
+
+    // Audio
+    XF86AudioMute { spawn "pactl" "set-sink-mute" "@DEFAULT_SINK@" "toggle"; }
+    XF86AudioLowerVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "-5%"; }
+    XF86AudioRaiseVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+5%"; }
+    XF86AudioMicMute { spawn "pactl" "set-source-mute" "@DEFAULT_SOURCE@" "toggle"; }
+
+    // Media playback
+    XF86AudioPlay { spawn "playerctl" "play-pause"; }
+    XF86AudioPause { spawn "playerctl" "play-pause"; }
+    XF86AudioPrev { spawn "playerctl" "previous"; }
+    XF86AudioNext { spawn "playerctl" "next"; }
+    XF86AudioStop { spawn "playerctl" "stop"; }
+
+    // Screen brightness
+    XF86MonBrightnessDown { spawn "brightnessctl" "set" "5%-"; }
+    XF86MonBrightnessUp { spawn "brightnessctl" "set" "5%+"; }
+}

@@ -1,0 +1,382 @@
+{
+  "bar": {
+    "autohide": false,
+    "autohideTimeout": 1000,
+    "height": 40,
+    "modules": {
+      "left": [
+        "workspaces"
+      ],
+      "center": [
+        "time"
+      ],
+      "right": [
+        "tray",
+        [
+          "kb",
+          "wifi",
+          "bt",
+          "vol",
+          "left",
+          "bat"
+        ]
+      ]
+    },
+    "opacity": 100,
+    "position": "top",
+    "style": "solid",
+    "time": {
+      "format": "hh:mm AP"
+    },
+    "width": 100,
+    "workspaceCount": 10,
+    "distinctPills": true,
+    "centerByEdges": true,
+    "groupColors": {
+      "g_kb": "#8ccff0"
+    },
+    "menuStyle": "button",
+    "menuShowLauncher": false,
+    "workspacesStyle": "pills",
+    "timeStyle": "classic",
+    "sysmonStyle": "circle",
+    "sysmonStats": [
+      "cpu",
+      "ram",
+      "temp"
+    ],
+    "btStyle": "button",
+    "volStyle": "button",
+    "volShowPercent": false,
+    "wifiStyle": "button",
+    "wifiShowName": false,
+    "visContinuous": false,
+    "timeShowDate": true,
+    "hideEmptyWorkspaces": true,
+    "kbShowIcon": true,
+    "kbStyle": "button"
+  },
+  "display": {
+    "monitors": {
+      "eDP-1": {
+        "enabled": false,
+        "scale": 1
+      },
+      "DP-1": {
+        "powerEnabled": true,
+        "enabled": false
+      },
+      "DP-2": {
+        "enabled": false
+      }
+    }
+  },
+  "dock": {
+    "apps": [
+      {
+        "name": "Kitty",
+        "comment": "Fast, feature-rich, GPU based terminal",
+        "desktop_id": "kitty.desktop",
+        "icon": "kitty"
+      },
+      {
+        "name": "Discord",
+        "comment": "All-in-one cross-platform voice and text chat for gamers",
+        "desktop_id": "discord",
+        "icon": "discord"
+      },
+      {
+        "name": "Thunar File Manager",
+        "comment": "Browse the filesystem with the file manager",
+        "desktop_id": "thunar",
+        "icon": "org.xfce.thunar"
+      },
+      {
+        "name": "itch",
+        "comment": "Install and play itch.io games easily",
+        "desktop_id": "itch",
+        "icon": "itch"
+      },
+      {
+        "name": "Krita",
+        "comment": "Digital Painting",
+        "desktop_id": "org.kde.krita",
+        "icon": "krita"
+      },
+      {
+        "name": "NixOS Manual",
+        "comment": "View NixOS documentation in a web browser",
+        "desktop_id": "nixos-manual",
+        "icon": "nix-snowflake"
+      },
+      {
+        "name": "Spotify",
+        "comment": "",
+        "desktop_id": "spotify",
+        "icon": "spotify-client"
+      },
+      {
+        "name": "Zen Browser",
+        "comment": "",
+        "desktop_id": "zen",
+        "icon": "zen"
+      },
+      {
+        "name": "Vivaldi",
+        "comment": "Access the Internet",
+        "desktop_id": "vivaldi-stable",
+        "icon": "vivaldi"
+      },
+      {
+        "name": "VSCodium",
+        "comment": "Code Editing. Redefined.",
+        "desktop_id": "codium",
+        "icon": "vscodium"
+      },
+      {
+        "name": "Ardour",
+        "comment": "Ardour Digital Audio Workstation",
+        "desktop_id": "ardour9",
+        "icon": "ardour9"
+      },
+      {
+        "name": "osu!",
+        "comment": "A free-to-win rhythm game. Rhythm is just a *click* away!",
+        "desktop_id": "osu!",
+        "icon": "osu"
+      },
+      {
+        "name": "PCSX2",
+        "comment": "Sony PlayStation 2 emulator",
+        "desktop_id": "PCSX2",
+        "icon": "PCSX2"
+      },
+      {
+        "name": "Dolphin Emulator",
+        "comment": "A Wii/GameCube Emulator",
+        "desktop_id": "dolphin-emu",
+        "icon": "dolphin-emu"
+      },
+      {
+        "name": "Emacs",
+        "comment": "Edit text",
+        "desktop_id": "emacs",
+        "icon": "emacs"
+      },
+      {
+        "name": "Faugus Launcher",
+        "comment": "Manage and play your Windows and Linux games easily",
+        "desktop_id": "faugus-launcher",
+        "icon": "faugus-launcher"
+      },
+      {
+        "name": "KeePassXC",
+        "comment": "Community-driven port of the Windows application “KeePass Password Safe”",
+        "desktop_id": "org.keepassxc.KeePassXC",
+        "icon": "keepassxc"
+      },
+      {
+        "name": "Komikku",
+        "comment": "Discover and read manga",
+        "desktop_id": "info.febvre.Komikku",
+        "icon": "info.febvre.Komikku"
+      },
+      {
+        "name": "Mission Center",
+        "comment": "",
+        "desktop_id": "io.missioncenter.MissionCenter",
+        "icon": "io.missioncenter.MissionCenter"
+      },
+      {
+        "name": "Nicotine+",
+        "comment": "Graphical client for the Soulseek peer-to-peer network",
+        "desktop_id": "org.nicotine_plus.Nicotine",
+        "icon": "org.nicotine_plus.Nicotine"
+      },
+      {
+        "name": "OBS Studio",
+        "comment": "Free and Open Source Streaming/Recording Software",
+        "desktop_id": "com.obsproject.Studio",
+        "icon": "com.obsproject.Studio"
+      },
+      {
+        "name": "ProtonPlus",
+        "comment": "A modern compatibility tools manager",
+        "desktop_id": "com.vysp3r.ProtonPlus",
+        "icon": "com.vysp3r.ProtonPlus"
+      },
+      {
+        "name": "Steam",
+        "comment": "Application for managing and playing games on Steam",
+        "desktop_id": "steam",
+        "icon": "steam"
+      },
+      {
+        "name": "Virtual Machine Manager",
+        "comment": "Manage virtual machines",
+        "desktop_id": "virt-manager",
+        "icon": "virt-manager"
+      }
+    ],
+    "autohide": false,
+    "autohideTimeout": 1000,
+    "background": true,
+    "cascadeScale": false,
+    "editing": false,
+    "elementSize": 46,
+    "enableScrolling": false,
+    "enabled": true,
+    "exclusive": false,
+    "floating": true,
+    "focusRunning": true,
+    "hoverScale": 120,
+    "maxElements": 7,
+    "maxVisibleElements": 7,
+    "onTop": true,
+    "overrideBoundsCorrection": false,
+    "position": "bottom",
+    "runningScope": "auto",
+    "scrollingElements": 7,
+    "showRunningApps": false,
+    "showRunningIndicators": true,
+    "smartAutohide": true,
+    "visibleElements": 7
+  },
+  "general": {
+    "avatarPath": "/home/moonwuzy/Pictures/PFPs/vivaldi_AAFo3n1oF5.png",
+    "language": "en",
+    "location": {
+      "ip": "104.205.27.250",
+      "latitude": 51.05011,
+      "longitude": -114.08529,
+      "city": "Calgary",
+      "region": "Alberta",
+      "region_code": "AB",
+      "country_name": "Canada",
+      "country_code": "CA",
+      "postal": "T2R",
+      "timezone": "America/Edmonton",
+      "utc_offset": "-0600",
+      "currency": "CAD",
+      "languages": "en-CA,fr-CA,iu",
+      "asn": "AS852",
+      "org": "TELUS Communications Inc.",
+      "source": "ipapi.co",
+      "updated_at": 1792669591
+    },
+    "muteSfx": false,
+    "weatherInterval": 30,
+    "weatherUnit": "metric",
+    "sfxVolume": 10,
+    "quickactions": true,
+    "settingsSeparateWindow": false,
+    "screenshotCaptureOnRelease": true
+  },
+  "idle": {
+    "actions": {
+      "dim": {
+        "command": "",
+        "enabled": false,
+        "id": "dim",
+        "isCustom": false,
+        "mprisInhibit": true,
+        "respectInhibitors": true,
+        "resumeCommand": "",
+        "timeout": 150
+      },
+      "dpms": {
+        "command": "",
+        "enabled": false,
+        "id": "dpms",
+        "isCustom": false,
+        "mprisInhibit": true,
+        "respectInhibitors": true,
+        "resumeCommand": "",
+        "timeout": 450
+      },
+      "lock": {
+        "command": "",
+        "enabled": true,
+        "id": "lock",
+        "isCustom": false,
+        "mprisInhibit": true,
+        "respectInhibitors": true,
+        "resumeCommand": "",
+        "timeout": 300
+      },
+      "suspend": {
+        "command": "",
+        "enabled": false,
+        "id": "suspend",
+        "isCustom": false,
+        "mprisInhibit": true,
+        "respectInhibitors": true,
+        "resumeCommand": "",
+        "timeout": 600
+      }
+    },
+    "enabled": true,
+    "lockOnSleep": false
+  },
+  "inputs": {},
+  "launcher": {
+    "position": "center",
+    "itemCount": 10
+  },
+  "notifications": {
+    "dnd": false,
+    "position": "top right",
+    "sound": true,
+    "soundFile": "/nix/store/3b4zkwm2mn5mmdyf60qrz83pfv222g1g-serpantinum-2.3.0/share/serpantinum/assets/sounds/notifications/Progress.wav",
+    "rightClickClose": true
+  },
+  "osd": {
+    "showAirplane": true,
+    "showNumLock": false,
+    "horizontalPosition": 50,
+    "verticalPosition": 10
+  },
+  "syspanel": {
+    "clipExpandProgress": 0,
+    "clipExpanded": false,
+    "clipState": 1
+  },
+  "theme": {
+    "activePreset": "Matugen",
+    "borderRadius": 10,
+    "colors": {
+      "base": "#000000",
+      "blue": "#ffffff",
+      "crust": "#000000",
+      "green": "#ffffff",
+      "mantle": "#050505",
+      "maroon": "#808080",
+      "mauve": "#d0d0d0",
+      "overlay0": "#5a5a5a",
+      "overlay1": "#7a7a7a",
+      "overlay2": "#9a9a9a",
+      "peach": "#cccccc",
+      "pink": "#e0e0e0",
+      "red": "#a0a0a0",
+      "sapphire": "#e0e0e0",
+      "subtext0": "#a0a0a0",
+      "subtext1": "#c0c0c0",
+      "surface0": "#1a1a1a",
+      "surface1": "#2a2a2a",
+      "surface2": "#3a3a3a",
+      "teal": "#c0c0c0",
+      "text": "#ffffff",
+      "yellow": "#ffffff"
+    },
+    "fontFamily": "JetBrains Mono",
+    "matugen": true,
+    "blurBackground": false,
+    "blurStyle": "liquid",
+    "elementOpacity": 50
+  },
+  "wallpaperDir": "/home/moonwuzy/Pictures/Wallpapers",
+  "widgets": {
+    "hideBarInRedactor": false
+  }
+}
+

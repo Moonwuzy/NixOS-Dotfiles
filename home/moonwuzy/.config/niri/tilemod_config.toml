@@ -1,0 +1,7 @@
+[default]
+num_stack = 2
+column_bounds = [1, 255]
+maximize_solos_on_open = true
+maximize_solos_on_close = true
+collapse_solos_on_open = true
+allow_outer_stack = true
