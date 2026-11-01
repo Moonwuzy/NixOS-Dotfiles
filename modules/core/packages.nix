@@ -3,11 +3,20 @@
 {
   home-manager.users.moonwuzy.home.packages = with pkgs; [
     pywal
+    nirimod
+    blanket
   ];
 
   environment.systemPackages = with pkgs; [
+    # My Packages
+    inputs.nixgram.packages.${pkgs.stdenv.hostPlatform.system}.default   
+
+
+    # Misc
     wget
     curl
+    rustfmt
+    
     
 
     # Desktop
@@ -20,24 +29,22 @@
     yazi
     wlogout
     pavucontrol
-    swaynotificationcenter
     libnotify
     ghostty
     zenity
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+    qbittorrent
+    proton-vpn
+    heroic
 
-    # Qylock / SDDM Qt 6 dependencies
     qt6.qtdeclarative
     qt6.qt5compat
     qt6.qtsvg
     qt6.qtmultimedia
-
-    # Video playback
-    gst_all_1.gstreamer
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-good
-    gst_all_1.gst-plugins-bad
-    gst_all_1.gst-plugins-ugly
+    qt6.qtsvg
+    qt6.qtvirtualkeyboard
+    qt6.qtmultimedia
+    qt6.qtimageformats
 
     # Media
     cmus
@@ -49,9 +56,7 @@
     spotatui
 
     # Appearance
-    pywal
     waypaper
-    swaybg
     papirus-icon-theme
     gnome-themes-extra
     catppuccin-sddm
@@ -87,6 +92,7 @@
     easyeffects
     fzf
     zsh-fzf-tab
+    zoxide
     wayland-utils
     mediawriter
     mission-center
@@ -100,7 +106,6 @@
     # Gaming
     wineWow64Packages.stable
     winetricks
-    protontricks
     protonplus
     vulkan-loader
     vulkan-tools
@@ -128,6 +133,22 @@
     # VR
     unityhub
     alcom
+   
+   # Social
+    whatsapp-electron
+    procps
+    cabextract
+    vesktop
+    ani-cli
+    yt-dlp
+    ani-skip
+    patch
+    xdg-user-dirs
+    upower
+    lutris
+    socat
+    mpvpaper
+    bazaar
   ];
 
   fonts = {

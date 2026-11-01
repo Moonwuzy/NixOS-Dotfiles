@@ -2,7 +2,7 @@
 
 {
   boot.kernelPackages =
-    inputs.nix-cachyos-kernel.legacyPackages.${pkgs.stdenv.hostPlatform.system}.linuxPackages-cachyos-lts;
+    inputs.nix-cachyos-kernel.legacyPackages.${pkgs.stdenv.hostPlatform.system}.linuxPackages-cachyos-latest;
 
   # Keep the systemd-boot setup shared by both installations.
   boot.loader.systemd-boot.enable = true;

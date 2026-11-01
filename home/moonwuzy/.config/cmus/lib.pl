@@ -840,6 +840,20 @@
 /mnt/violet/Music/Jeremy Soule/The Elder Scrolls V_ Skyrim_ Original Game Soundtrack/3-17 Jeremy Soule - Sovngarde.flac
 /mnt/violet/Music/Jeremy Soule/The Elder Scrolls V_ Skyrim_ Original Game Soundtrack/3-18 Jeremy Soule - Wind Guide You.flac
 /mnt/violet/Music/Jeremy Soule/The Elder Scrolls V_ Skyrim_ Original Game Soundtrack/4-01 Jeremy Soule & Mark Lampert - Skyrim Atmospheres.flac
+/mnt/violet/Music/Jon Bellion/The Human Condition/Jon Bellion-The Human Condition-01-He Is The Same.flac
+/mnt/violet/Music/Jon Bellion/The Human Condition/Jon Bellion-The Human Condition-02-80's Films.flac
+/mnt/violet/Music/Jon Bellion/The Human Condition/Jon Bellion-The Human Condition-03-All Time Low.flac
+/mnt/violet/Music/Jon Bellion/The Human Condition/Jon Bellion-The Human Condition-04-New York Soul (Pt. ii).flac
+/mnt/violet/Music/Jon Bellion/The Human Condition/Jon Bellion-The Human Condition-05-Fashion.flac
+/mnt/violet/Music/Jon Bellion/The Human Condition/Jon Bellion-The Human Condition-06-Maybe IDK.flac
+/mnt/violet/Music/Jon Bellion/The Human Condition/Jon Bellion-The Human Condition-07-Woke The F_ck Up.flac
+/mnt/violet/Music/Jon Bellion/The Human Condition/Jon Bellion-The Human Condition-08-Overwhelming.flac
+/mnt/violet/Music/Jon Bellion/The Human Condition/Jon Bellion-The Human Condition-09-Weight Of The World.flac
+/mnt/violet/Music/Jon Bellion/The Human Condition/Jon Bellion-The Human Condition-10-The Good In Me.flac
+/mnt/violet/Music/Jon Bellion/The Human Condition/Jon Bellion-The Human Condition-11-Morning In America.flac
+/mnt/violet/Music/Jon Bellion/The Human Condition/Jon Bellion-The Human Condition-12-iRobot.flac
+/mnt/violet/Music/Jon Bellion/The Human Condition/Jon Bellion-The Human Condition-13-Guillotine.flac
+/mnt/violet/Music/Jon Bellion/The Human Condition/Jon Bellion-The Human Condition-14-Hand Of God (Outro).flac
 /mnt/violet/Music/Julia Wolf/PRESSURE/01 Kill You Off.flac
 /mnt/violet/Music/Julia Wolf/PRESSURE/02 Pearl.flac
 /mnt/violet/Music/Julia Wolf/PRESSURE/03 Fingernails.flac
@@ -1107,6 +1121,32 @@
 /mnt/violet/Music/NICO Touches the Walls/オーロラ/10 風人.mp3
 /mnt/violet/Music/NICO Touches the Walls/オーロラ/11 波.mp3
 /mnt/violet/Music/NICO Touches the Walls/オーロラ/12 トマト.mp3
+/mnt/violet/Music/_NSYNC/'N Sync/01 Tearin’ Up My Heart (radio edit).flac
+/mnt/violet/Music/_NSYNC/'N Sync/02 I Just Wanna Be With You.flac
+/mnt/violet/Music/_NSYNC/'N Sync/03 Here We Go (radio cut).flac
+/mnt/violet/Music/_NSYNC/'N Sync/04 For the Girl Who Has Everything (club mix).flac
+/mnt/violet/Music/_NSYNC/'N Sync/05 (God Must Have Spent) a Little More Time on You (remix).flac
+/mnt/violet/Music/_NSYNC/'N Sync/06 You Got It.flac
+/mnt/violet/Music/_NSYNC/'N Sync/07 I Need Love.flac
+/mnt/violet/Music/_NSYNC/'N Sync/08 I Want You Back (radio edit).flac
+/mnt/violet/Music/_NSYNC/'N Sync/09 Everything I Own.flac
+/mnt/violet/Music/_NSYNC/'N Sync/10 Thinking of You (I Drive Myself Crazy) (remix).flac
+/mnt/violet/Music/_NSYNC/'N Sync/11 Crazy for You.flac
+/mnt/violet/Music/_NSYNC/'N Sync/12 Sailing.flac
+/mnt/violet/Music/_NSYNC/'N Sync/13 Giddy Up.flac
+/mnt/violet/Music/_NSYNC/'N Sync/14 U Drive Me Crazy (radio edit).flac
+/mnt/violet/Music/_NSYNC/No Strings Attached/01 _NSYNC - Bye Bye Bye.flac
+/mnt/violet/Music/_NSYNC/No Strings Attached/02 _NSYNC - It’s Gonna Be Me.flac
+/mnt/violet/Music/_NSYNC/No Strings Attached/03 _NSYNC featuring Lisa “Left Eye” Lopes - Space Cowboy (Yippie‐Yi‐Yay).flac
+/mnt/violet/Music/_NSYNC/No Strings Attached/04 _NSYNC - Just Got Paid.flac
+/mnt/violet/Music/_NSYNC/No Strings Attached/05 _NSYNC - It Makes Me Ill.flac
+/mnt/violet/Music/_NSYNC/No Strings Attached/06 _NSYNC - This I Promise You.flac
+/mnt/violet/Music/_NSYNC/No Strings Attached/07 _NSYNC - No Strings Attached.flac
+/mnt/violet/Music/_NSYNC/No Strings Attached/08 _NSYNC - Digital Get Down.flac
+/mnt/violet/Music/_NSYNC/No Strings Attached/09 _NSYNC - Bringin’ da Noise.flac
+/mnt/violet/Music/_NSYNC/No Strings Attached/10 _NSYNC - That’s When I’ll Stop Loving You.flac
+/mnt/violet/Music/_NSYNC/No Strings Attached/11 _NSYNC - I’ll Be Good for You.flac
+/mnt/violet/Music/_NSYNC/No Strings Attached/12 _NSYNC - I Thought She Knew.flac
 /mnt/violet/Music/ONE OK ROCK/DETOX/1-01 ONE OK ROCK - NASTY.flac
 /mnt/violet/Music/ONE OK ROCK/DETOX/1-02 ONE OK ROCK - Dystopia.flac
 /mnt/violet/Music/ONE OK ROCK/DETOX/1-03 ONE OK ROCK - Tropical Therapy.flac
@@ -1173,6 +1213,20 @@
 /mnt/violet/Music/Paramore/Paramore/15 Interlude_ I’m Not Angry Anymore.flac
 /mnt/violet/Music/Paramore/Paramore/16 Be Alone.flac
 /mnt/violet/Music/Paramore/Paramore/17 Future.flac
+/mnt/violet/Music/pH-1/loves/01 pH-1 feat. PENOMECO - Cupid.mp3
+/mnt/violet/Music/pH-1/loves/02 pH-1 feat. Mokyo - Groupie.mp3
+/mnt/violet/Music/pH-1/HALO/01 pH-1 - Alright.mp3
+/mnt/violet/Music/pH-1/HALO/02 pH-1 - HYFR (너무 싫어).mp3
+/mnt/violet/Music/pH-1/HALO/03 pH-1 feat. Mokyo & The Quiett - Malibu.mp3
+/mnt/violet/Music/pH-1/HALO/04 pH-1 feat. Chang Sukhoon - Lights Out.mp3
+/mnt/violet/Music/pH-1/HALO/05 pH-1 feat. Owen Ovadoz & Paloalto - Push Me.mp3
+/mnt/violet/Music/pH-1/HALO/06 pH-1 - Like Me.mp3
+/mnt/violet/Music/pH-1/HALO/07 pH-1 - Boat Ride (못봐).mp3
+/mnt/violet/Music/pH-1/HALO/08 pH-1 feat. Ted Park - Rain Man.mp3
+/mnt/violet/Music/pH-1/HALO/09 pH-1 feat. Coogie - Olaf.mp3
+/mnt/violet/Music/pH-1/HALO/10 pH-1 - Dirty Nikes.mp3
+/mnt/violet/Music/pH-1/HALO/11 pH-1 feat. Jay Park - Til I Die.mp3
+/mnt/violet/Music/pH-1/HALO/12 pH-1 feat. Mokyo - Making Film (메이킹필름).mp3
 /mnt/violet/Music/Pharrell Williams/G I R L/01 Pharrell Williams - Marilyn Monroe.flac
 /mnt/violet/Music/Pharrell Williams/G I R L/02 Pharrell Williams with Justin Timberlake - Brand New.flac
 /mnt/violet/Music/Pharrell Williams/G I R L/03 Pharrell Williams - Hunter.flac
@@ -1238,6 +1292,399 @@
 /mnt/violet/Music/RL Grime/NOVA/13 RL Grime feat. 24hrs - UCLA.flac
 /mnt/violet/Music/RL Grime/NOVA/14 RL Grime - Rainer.flac
 /mnt/violet/Music/RL Grime/NOVA/15 RL Grime feat. Jeremy Zucker - Atoms.flac
+/mnt/violet/Music/SCATTERBRAIN/PHASES/01 PHASES.flac
+/mnt/violet/Music/SCATTERBRAIN/FAST LANE/01 FAST LANE.flac
+/mnt/violet/Music/sennoh/angel beats!/angel beats!.mp3
+/mnt/violet/Music/sennoh/back2u/back2u.mp3
+/mnt/violet/Music/sennoh/same but different_/01 clarity_.mp3
+/mnt/violet/Music/sennoh/same but different_/02 bartender _3.mp3
+/mnt/violet/Music/sennoh/same but different_/03 fireflies _3.mp3
+/mnt/violet/Music/sennoh/same but different_/05 everytime we touch...mp3
+/mnt/violet/Music/sennoh/same but different_/06 sanctuary +.mp3
+/mnt/violet/Music/sennoh/same but different 2!_/01 sennoh & 03 Greedo - a thousand miles.mp3
+/mnt/violet/Music/sennoh/same but different 2!_/02 sennoh & Adamn Killa - baby...mp3
+/mnt/violet/Music/sennoh/same but different 2!_/04 sennoh - still into you!.mp3
+/mnt/violet/Music/sennoh/same but different 2!_/05 sennoh - duvet .｡.__.mp3
+/mnt/violet/Music/sennoh/same but different 2!_/06 sennoh - so sick _3.mp3
+/mnt/violet/Music/sennoh/same but different 2!_/07 sennoh - rocketeer_.mp3
+/mnt/violet/Music/sennoh/same but different 2!_/08 sennoh - headlock +.mp3
+/mnt/violet/Music/Sleep Token/One/01 Thread the Needle.flac
+/mnt/violet/Music/Sleep Token/One/02 Fields of Elation.flac
+/mnt/violet/Music/Sleep Token/One/03 When the Bough Breaks.flac
+/mnt/violet/Music/Sleep Token/One/04 Thread the Needle (piano).flac
+/mnt/violet/Music/Sleep Token/One/05 Fields of Elation (piano).flac
+/mnt/violet/Music/Sleep Token/One/06 When the Bough Breaks (piano).flac
+/mnt/violet/Music/Sleep Token/Two/01 Calcutta.flac
+/mnt/violet/Music/Sleep Token/Two/02 Nazareth.flac
+/mnt/violet/Music/Sleep Token/Two/03 Jericho.flac
+/mnt/violet/Music/Sleep Token/Sundowning/01 The Night Does Not Belong to God.flac
+/mnt/violet/Music/Sleep Token/Sundowning/02 The Offering.flac
+/mnt/violet/Music/Sleep Token/Sundowning/03 Levitate.flac
+/mnt/violet/Music/Sleep Token/Sundowning/04 Dark Signs.flac
+/mnt/violet/Music/Sleep Token/Sundowning/05 Higher.flac
+/mnt/violet/Music/Sleep Token/Sundowning/06 Take Aim.flac
+/mnt/violet/Music/Sleep Token/Sundowning/07 Give.flac
+/mnt/violet/Music/Sleep Token/Sundowning/08 Gods.flac
+/mnt/violet/Music/Sleep Token/Sundowning/09 Sugar.flac
+/mnt/violet/Music/Sleep Token/Sundowning/10 Say That You Will.flac
+/mnt/violet/Music/Sleep Token/Sundowning/11 Drag Me Under.flac
+/mnt/violet/Music/Sleep Token/Sundowning/12 Blood Sport.flac
+/mnt/violet/Music/Sleep Token/This Place Will Become Your Tomb/01 Atlantic.flac
+/mnt/violet/Music/Sleep Token/This Place Will Become Your Tomb/02 Hypnosis.flac
+/mnt/violet/Music/Sleep Token/This Place Will Become Your Tomb/03 Mine.flac
+/mnt/violet/Music/Sleep Token/This Place Will Become Your Tomb/04 Like That.flac
+/mnt/violet/Music/Sleep Token/This Place Will Become Your Tomb/05 The Love You Want.flac
+/mnt/violet/Music/Sleep Token/This Place Will Become Your Tomb/06 Fall for Me.flac
+/mnt/violet/Music/Sleep Token/This Place Will Become Your Tomb/07 Alkaline.flac
+/mnt/violet/Music/Sleep Token/This Place Will Become Your Tomb/08 Distraction.flac
+/mnt/violet/Music/Sleep Token/This Place Will Become Your Tomb/09 Descending.flac
+/mnt/violet/Music/Sleep Token/This Place Will Become Your Tomb/10 Telomeres.flac
+/mnt/violet/Music/Sleep Token/This Place Will Become Your Tomb/11 High Water.flac
+/mnt/violet/Music/Sleep Token/This Place Will Become Your Tomb/12 Missing Limbs.flac
+/mnt/violet/Music/Sleep Token/Take Me Back to Eden/01 Chokehold.flac
+/mnt/violet/Music/Sleep Token/Take Me Back to Eden/02 The Summoning.flac
+/mnt/violet/Music/Sleep Token/Take Me Back to Eden/03 Granite.flac
+/mnt/violet/Music/Sleep Token/Take Me Back to Eden/04 Aqua Regia.flac
+/mnt/violet/Music/Sleep Token/Take Me Back to Eden/05 Vore.flac
+/mnt/violet/Music/Sleep Token/Take Me Back to Eden/06 Ascensionism.flac
+/mnt/violet/Music/Sleep Token/Take Me Back to Eden/07 Are You Really Okay_.flac
+/mnt/violet/Music/Sleep Token/Take Me Back to Eden/08 The Apparition.flac
+/mnt/violet/Music/Sleep Token/Take Me Back to Eden/09 DYWTYLM.flac
+/mnt/violet/Music/Sleep Token/Take Me Back to Eden/10 Rain.flac
+/mnt/violet/Music/Sleep Token/Take Me Back to Eden/11 Take Me Back to Eden.flac
+/mnt/violet/Music/Sleep Token/Take Me Back to Eden/12 Euclid.flac
+/mnt/violet/Music/Sleep Token/Even in Arcadia/01 Look to Windward.flac
+/mnt/violet/Music/Sleep Token/Even in Arcadia/02 Emergence.flac
+/mnt/violet/Music/Sleep Token/Even in Arcadia/03 Past Self.flac
+/mnt/violet/Music/Sleep Token/Even in Arcadia/04 Dangerous.flac
+/mnt/violet/Music/Sleep Token/Even in Arcadia/05 Caramel.flac
+/mnt/violet/Music/Sleep Token/Even in Arcadia/06 Even in Arcadia.flac
+/mnt/violet/Music/Sleep Token/Even in Arcadia/07 Provider.flac
+/mnt/violet/Music/Sleep Token/Even in Arcadia/08 Damocles.flac
+/mnt/violet/Music/Sleep Token/Even in Arcadia/09 Gethsemane.flac
+/mnt/violet/Music/Sleep Token/Even in Arcadia/10 Infinite Baths.flac
+/mnt/violet/Music/Stray Kids/GO LIVE/01 GO LIVE.flac
+/mnt/violet/Music/Stray Kids/GO LIVE/02 God’s Menu.flac
+/mnt/violet/Music/Stray Kids/GO LIVE/03 Easy.flac
+/mnt/violet/Music/Stray Kids/GO LIVE/04 Pacemaker.flac
+/mnt/violet/Music/Stray Kids/GO LIVE/05 Airplane.flac
+/mnt/violet/Music/Stray Kids/GO LIVE/06 Another Day.flac
+/mnt/violet/Music/Stray Kids/GO LIVE/07 Phobia.flac
+/mnt/violet/Music/Stray Kids/GO LIVE/08 Blueprint.flac
+/mnt/violet/Music/Stray Kids/GO LIVE/09 TA.flac
+/mnt/violet/Music/Stray Kids/GO LIVE/10 Haven.flac
+/mnt/violet/Music/Stray Kids/GO LIVE/11 TOP (“Tower of God” OP).flac
+/mnt/violet/Music/Stray Kids/GO LIVE/12 SLUMP (“Tower of God” ED).flac
+/mnt/violet/Music/Stray Kids/GO LIVE/13 Mixtape _ Gone Days.flac
+/mnt/violet/Music/Stray Kids/GO LIVE/14 Mixtape _ On Track.flac
+/mnt/violet/Music/Stray Kids/5-STAR/01 Stray Kids - Hall of Fame.flac
+/mnt/violet/Music/Stray Kids/5-STAR/02 Stray Kids - S-Class.flac
+/mnt/violet/Music/Stray Kids/5-STAR/03 Stray Kids - ITEM.flac
+/mnt/violet/Music/Stray Kids/5-STAR/04 Stray Kids - Super Bowl.flac
+/mnt/violet/Music/Stray Kids/5-STAR/05 Stray Kids Feat. Tiger JK - TOPLINE.flac
+/mnt/violet/Music/Stray Kids/5-STAR/06 Stray Kids - DLC.flac
+/mnt/violet/Music/Stray Kids/5-STAR/07 Stray Kids - GET LIT.flac
+/mnt/violet/Music/Stray Kids/5-STAR/08 Stray Kids - Collision.flac
+/mnt/violet/Music/Stray Kids/5-STAR/09 Stray Kids - FNF.flac
+/mnt/violet/Music/Stray Kids/5-STAR/10 Stray Kids - Youtiful.flac
+/mnt/violet/Music/Stray Kids/5-STAR/11 Stray Kids - THE SOUND (Korean ver.).flac
+/mnt/violet/Music/Stray Kids/5-STAR/12 Stray Kids - Mixtape _ Time Out.flac
+/mnt/violet/Music/succducc/arrival/01 arrival.m4a
+/mnt/violet/Music/succducc/azure/01 azure.m4a
+/mnt/violet/Music/suisai/calm down w_ skele ~ [p. diamoon].m4a
+/mnt/violet/Music/The Blue Stones/Black Holes/01 Airlock.flac
+/mnt/violet/Music/The Blue Stones/Black Holes/02 The Drop.flac
+/mnt/violet/Music/The Blue Stones/Black Holes/03 Black Holes (Solid Ground).flac
+/mnt/violet/Music/The Blue Stones/Black Holes/04 The Hard Part.flac
+/mnt/violet/Music/The Blue Stones/Black Holes/05 Be My Fire.flac
+/mnt/violet/Music/The Blue Stones/Black Holes/06 Lay.flac
+/mnt/violet/Music/The Blue Stones/Black Holes/07 Rolling With the Punches.flac
+/mnt/violet/Music/The Blue Stones/Black Holes/08 Little Brother.flac
+/mnt/violet/Music/The Blue Stones/Black Holes/09 Midnight.flac
+/mnt/violet/Music/The Blue Stones/Black Holes/10 Orbit.flac
+/mnt/violet/Music/The Blue Stones/Black Holes/11 Magic.flac
+/mnt/violet/Music/The Blue Stones/Hidden Gems/01 Lights On.flac
+/mnt/violet/Music/The Blue Stones/Hidden Gems/02 Shakin’ Off the Rust.flac
+/mnt/violet/Music/The Blue Stones/Hidden Gems/03 One By One.flac
+/mnt/violet/Music/The Blue Stones/Hidden Gems/04 Careless.flac
+/mnt/violet/Music/The Blue Stones/Hidden Gems/05 Grim.flac
+/mnt/violet/Music/The Blue Stones/Hidden Gems/06 Let It Ride.flac
+/mnt/violet/Music/The Blue Stones/Hidden Gems/07 L.A. Afterlife.flac
+/mnt/violet/Music/The Blue Stones/Hidden Gems/08 Spirit.flac
+/mnt/violet/Music/The Blue Stones/Hidden Gems/09 Make This Easy.flac
+/mnt/violet/Music/The Blue Stones/Hidden Gems/10 Oceans.flac
+/mnt/violet/Music/TheFatRat feat. Laura Brehm/MAYDAY/01 MAYDAY.flac
+/mnt/violet/Music/The Goo Goo Dolls/Dizzy Up the Girl/01 Dizzy.flac
+/mnt/violet/Music/The Goo Goo Dolls/Dizzy Up the Girl/02 Slide.flac
+/mnt/violet/Music/The Goo Goo Dolls/Dizzy Up the Girl/03 Broadway.flac
+/mnt/violet/Music/The Goo Goo Dolls/Dizzy Up the Girl/04 January Friend.flac
+/mnt/violet/Music/The Goo Goo Dolls/Dizzy Up the Girl/05 Black Balloon.flac
+/mnt/violet/Music/The Goo Goo Dolls/Dizzy Up the Girl/06 Bullet Proof.flac
+/mnt/violet/Music/The Goo Goo Dolls/Dizzy Up the Girl/07 Amigone.flac
+/mnt/violet/Music/The Goo Goo Dolls/Dizzy Up the Girl/08 All Eyes on Me.flac
+/mnt/violet/Music/The Goo Goo Dolls/Dizzy Up the Girl/09 Full Forever.flac
+/mnt/violet/Music/The Goo Goo Dolls/Dizzy Up the Girl/10 Acoustic #3.flac
+/mnt/violet/Music/The Goo Goo Dolls/Dizzy Up the Girl/11 Iris.flac
+/mnt/violet/Music/The Goo Goo Dolls/Dizzy Up the Girl/12 Extra Pale.flac
+/mnt/violet/Music/The Goo Goo Dolls/Dizzy Up the Girl/13 Hate This Place.flac
+/mnt/violet/Music/The Killers/Hot Fuss/01 Jenny Was a Friend of Mine.flac
+/mnt/violet/Music/The Killers/Hot Fuss/02 Mr. Brightside.flac
+/mnt/violet/Music/The Killers/Hot Fuss/03 Smile Like You Mean It.flac
+/mnt/violet/Music/The Killers/Hot Fuss/04 Somebody Told Me.flac
+/mnt/violet/Music/The Killers/Hot Fuss/05 All These Things That I’ve Done.flac
+/mnt/violet/Music/The Killers/Hot Fuss/06 Andy, You’re a Star.flac
+/mnt/violet/Music/The Killers/Hot Fuss/07 On Top.flac
+/mnt/violet/Music/The Killers/Hot Fuss/08 Change Your Mind.flac
+/mnt/violet/Music/The Killers/Hot Fuss/09 Believe Me Natalie.flac
+/mnt/violet/Music/The Killers/Hot Fuss/10 Midnight Show.flac
+/mnt/violet/Music/The Killers/Hot Fuss/11 Everything Will Be Alright.flac
+/mnt/violet/Music/The Killers/Hot Fuss/12 Glamorous Indie Rock & Roll.flac
+/mnt/violet/Music/The Killers/Hot Fuss/13 The Ballad of Michael Valentine.flac
+/mnt/violet/Music/The Killers/Hot Fuss/14 Under the Gun.flac
+/mnt/violet/Music/The Police/Synchronicity/01 Synchronicity I.flac
+/mnt/violet/Music/The Police/Synchronicity/02 Walking in Your Footsteps.flac
+/mnt/violet/Music/The Police/Synchronicity/03 O My God.flac
+/mnt/violet/Music/The Police/Synchronicity/04 Mother.flac
+/mnt/violet/Music/The Police/Synchronicity/05 Miss Gradenko.flac
+/mnt/violet/Music/The Police/Synchronicity/06 Synchronicity II.flac
+/mnt/violet/Music/The Police/Synchronicity/07 Every Breath You Take.flac
+/mnt/violet/Music/The Police/Synchronicity/08 King of Pain.flac
+/mnt/violet/Music/The Police/Synchronicity/09 Wrapped Around Your Finger.flac
+/mnt/violet/Music/The Police/Synchronicity/10 Tea in the Sahara.flac
+/mnt/violet/Music/The Police/Synchronicity/11 Murder by Numbers.flac
+/mnt/violet/Music/The Police/Outlandos d’Amour/01 Next to You.flac
+/mnt/violet/Music/The Police/Outlandos d’Amour/02 So Lonely.flac
+/mnt/violet/Music/The Police/Outlandos d’Amour/03 Roxanne.flac
+/mnt/violet/Music/The Police/Outlandos d’Amour/04 Hole in My Life.flac
+/mnt/violet/Music/The Police/Outlandos d’Amour/05 Peanuts.flac
+/mnt/violet/Music/The Police/Outlandos d’Amour/06 Can’t Stand Losing You.flac
+/mnt/violet/Music/The Police/Outlandos d’Amour/07 Truth Hits Everybody.flac
+/mnt/violet/Music/The Police/Outlandos d’Amour/08 Born in the 50’s.flac
+/mnt/violet/Music/The Police/Outlandos d’Amour/09 Be My Girl-Sally.flac
+/mnt/violet/Music/The Police/Outlandos d’Amour/10 Masoko Tanga.flac
+/mnt/violet/Music/The Police/Reggatta de Blanc/01 Message in a Bottle.flac
+/mnt/violet/Music/The Police/Reggatta de Blanc/02 Reggatta de Blanc.flac
+/mnt/violet/Music/The Police/Reggatta de Blanc/03 It's Alright for You.flac
+/mnt/violet/Music/The Police/Reggatta de Blanc/04 Bring on the Night.flac
+/mnt/violet/Music/The Police/Reggatta de Blanc/05 Deathwish.flac
+/mnt/violet/Music/The Police/Reggatta de Blanc/06 Walking on the Moon.flac
+/mnt/violet/Music/The Police/Reggatta de Blanc/07 On Any Other Day.flac
+/mnt/violet/Music/The Police/Reggatta de Blanc/08 The Bed's Too Big Without You.flac
+/mnt/violet/Music/The Police/Reggatta de Blanc/09 Contact.flac
+/mnt/violet/Music/The Police/Reggatta de Blanc/10 Does Everyone Stare.flac
+/mnt/violet/Music/The Police/Reggatta de Blanc/11 No Time This Time.flac
+/mnt/violet/Music/Thornhill/BODIES_ DEFINITIVE/01 DIESEL.flac
+/mnt/violet/Music/Thornhill/BODIES_ DEFINITIVE/02 Revolver.flac
+/mnt/violet/Music/Thornhill/BODIES_ DEFINITIVE/03 Silver Swarm.flac
+/mnt/violet/Music/Thornhill/BODIES_ DEFINITIVE/04 Only Ever You.flac
+/mnt/violet/Music/Thornhill/BODIES_ DEFINITIVE/05 fall into the wind.flac
+/mnt/violet/Music/Thornhill/BODIES_ DEFINITIVE/06 TONGUES.flac
+/mnt/violet/Music/Thornhill/BODIES_ DEFINITIVE/07 nerv.flac
+/mnt/violet/Music/Thornhill/BODIES_ DEFINITIVE/08 Obsession.flac
+/mnt/violet/Music/Thornhill/BODIES_ DEFINITIVE/09 CRUSH.flac
+/mnt/violet/Music/Thornhill/BODIES_ DEFINITIVE/10 under the knife.flac
+/mnt/violet/Music/Thornhill/BODIES_ DEFINITIVE/11 For Now.flac
+/mnt/violet/Music/Thornhill/BODIES_ DEFINITIVE/12 Mercia.flac
+/mnt/violet/Music/Three Days Grace/Three Days Grace/01 Burn.flac
+/mnt/violet/Music/Three Days Grace/Three Days Grace/02 Just Like You.flac
+/mnt/violet/Music/Three Days Grace/Three Days Grace/03 I Hate Everything About You.flac
+/mnt/violet/Music/Three Days Grace/Three Days Grace/04 Home.flac
+/mnt/violet/Music/Three Days Grace/Three Days Grace/05 Scared.flac
+/mnt/violet/Music/Three Days Grace/Three Days Grace/06 Let You Down.flac
+/mnt/violet/Music/Three Days Grace/Three Days Grace/07 Now or Never.flac
+/mnt/violet/Music/Three Days Grace/Three Days Grace/08 Born Like This.flac
+/mnt/violet/Music/Three Days Grace/Three Days Grace/09 Drown.flac
+/mnt/violet/Music/Three Days Grace/Three Days Grace/10 Wake Up.flac
+/mnt/violet/Music/Three Days Grace/Three Days Grace/11 Take Me Under.flac
+/mnt/violet/Music/Three Days Grace/Three Days Grace/12 Overrated.flac
+/mnt/violet/Music/Three Days Grace/One‐X/01 It’s All Over.flac
+/mnt/violet/Music/Three Days Grace/One‐X/02 Pain.flac
+/mnt/violet/Music/Three Days Grace/One‐X/03 Animal I Have Become.flac
+/mnt/violet/Music/Three Days Grace/One‐X/04 Never Too Late.flac
+/mnt/violet/Music/Three Days Grace/One‐X/05 On My Own.flac
+/mnt/violet/Music/Three Days Grace/One‐X/06 Riot.flac
+/mnt/violet/Music/Three Days Grace/One‐X/07 Get Out Alive.flac
+/mnt/violet/Music/Three Days Grace/One‐X/08 Let It Die.flac
+/mnt/violet/Music/Three Days Grace/One‐X/09 Over and Over.flac
+/mnt/violet/Music/Three Days Grace/One‐X/10 Time of Dying.flac
+/mnt/violet/Music/Three Days Grace/One‐X/11 Gone Forever.flac
+/mnt/violet/Music/Three Days Grace/One‐X/12 One‐X.flac
+/mnt/violet/Music/Three Days Grace/Life Starts Now/01 Bitter Taste.flac
+/mnt/violet/Music/Three Days Grace/Life Starts Now/02 Break.flac
+/mnt/violet/Music/Three Days Grace/Life Starts Now/03 World So Cold.flac
+/mnt/violet/Music/Three Days Grace/Life Starts Now/04 Lost in You.flac
+/mnt/violet/Music/Three Days Grace/Life Starts Now/05 The Good Life.flac
+/mnt/violet/Music/Three Days Grace/Life Starts Now/06 No More.flac
+/mnt/violet/Music/Three Days Grace/Life Starts Now/07 Last to Know.flac
+/mnt/violet/Music/Three Days Grace/Life Starts Now/08 Someone Who Cares.flac
+/mnt/violet/Music/Three Days Grace/Life Starts Now/09 Bully.flac
+/mnt/violet/Music/Three Days Grace/Life Starts Now/10 Without You.flac
+/mnt/violet/Music/Three Days Grace/Life Starts Now/11 Goin’ Down.flac
+/mnt/violet/Music/Three Days Grace/Life Starts Now/12 Life Starts Now.flac
+/mnt/violet/Music/Tiësto/A Town Called Paradise/01 Tiësto - Red Lights.flac
+/mnt/violet/Music/Tiësto/A Town Called Paradise/02 Tiësto feat. Cruickshank - Footprints.flac
+/mnt/violet/Music/Tiësto/A Town Called Paradise/03 Tiësto feat. DBX - Light Years Away.flac
+/mnt/violet/Music/Tiësto/A Town Called Paradise/04 Tiësto feat. Zac Barnett - A Town Called Paradise.flac
+/mnt/violet/Music/Tiësto/A Town Called Paradise/05 Tiësto & Hardwell feat. Matthew Koma - Written in Reverse.flac
+/mnt/violet/Music/Tiësto/A Town Called Paradise/06 Tiësto feat. Andreas Moe - Echoes.flac
+/mnt/violet/Music/Tiësto/A Town Called Paradise/07 Tiësto & Firebeatz feat. Ladyhawke - Last Train.flac
+/mnt/violet/Music/Tiësto/A Town Called Paradise/08 Tiësto feat. Matthew Koma - Wasted.flac
+/mnt/violet/Music/Tiësto/A Town Called Paradise/09 Tiësto feat. Icona Pop - Let's Go.flac
+/mnt/violet/Music/Tiësto/A Town Called Paradise/10 Tiësto feat. Ou Est Le Swimming Pool - The Feeling.flac
+/mnt/violet/Music/Tiësto/A Town Called Paradise/11 Tiësto feat. Christian Burns - Shimmer.flac
+/mnt/violet/Music/Tiësto/A Town Called Paradise/12 Tiësto & Kaaze - Rocky.flac
+/mnt/violet/Music/Tiësto/A Town Called Paradise/13 Tiësto & Sultan & Ned Shepard feat. Quilla - Close to Me.flac
+/mnt/violet/Music/Tiësto/A Town Called Paradise/14 Tiësto feat. Krewella - Set Yourself Free.flac
+/mnt/violet/Music/Tiësto/A Town Called Paradise/15 Tiësto & MOTi feat. Denny White - Don't Hide Your Light.flac
+/mnt/violet/Music/Tiësto/A Town Called Paradise/16 Tiësto & Fred Falke feat. Elan Lea - Calling on Angels.flac
+/mnt/violet/Music/Tiësto/A Town Called Paradise/17 Tiësto & Dzeko & Torres - Can't Forget.flac
+/mnt/violet/Music/Tiësto/A Town Called Paradise/18 Tiësto feat. Kyler England - Take Me (radio edit).flac
+/mnt/violet/Music/Tiësto/Club Life, Volume Four_ New York City/01 MOTi - Valencia (intro edit) (John Christian remix).flac
+/mnt/violet/Music/Tiësto/Club Life, Volume Four_ New York City/02 Tiësto & KSHMR feat. Vassy - Secrets.flac
+/mnt/violet/Music/Tiësto/Club Life, Volume Four_ New York City/03 Dzeko & Torres & Maestro Harrell feat. DELORA - For You.flac
+/mnt/violet/Music/Tiësto/Club Life, Volume Four_ New York City/04 Tiësto & Martin Garrix - The Only Way Is Up.flac
+/mnt/violet/Music/Tiësto/Club Life, Volume Four_ New York City/05 Bobby Puma - Someone Somewhere (Tiësto edit).flac
+/mnt/violet/Music/Tiësto/Club Life, Volume Four_ New York City/06 Tiësto - Butterflies.flac
+/mnt/violet/Music/Tiësto/Club Life, Volume Four_ New York City/07 Tiësto & The Disco Fries - Chant.flac
+/mnt/violet/Music/Tiësto/Club Life, Volume Four_ New York City/08 Tiësto - Change Your World.flac
+/mnt/violet/Music/Tiësto/Club Life, Volume Four_ New York City/09 A&G - Lucid.flac
+/mnt/violet/Music/Tiësto/Club Life, Volume Four_ New York City/10 KSHMR - Kashmir.flac
+/mnt/violet/Music/Tiësto/Club Life, Volume Four_ New York City/11 Dzeko & Torres feat. Delaney - Air.flac
+/mnt/violet/Music/Tiësto/Club Life, Volume Four_ New York City/12 Dotan - Home (Tiësto vs. twoloud remix).flac
+/mnt/violet/Music/Tiësto/Club Life, Volume Four_ New York City/13 Wee-O feat. Morgan Karr - Fighting For (Tiësto edit).flac
+/mnt/violet/Music/Tiësto/Club Life, Volume Four_ New York City/14 Alvaro & Jetfire - Guestlist.flac
+/mnt/violet/Music/Tiësto/Club Life, Volume Four_ New York City/15 Tiësto feat. DallasK - Show Me.flac
+/mnt/violet/Music/Tiësto/Club Life, Volume Four_ New York City/16 Firebeatz - Sky High (Tiësto edit).flac
+/mnt/violet/Music/Tiësto/Club Life, Volume Four_ New York City/17 MOTi - The House of Now (Tiësto edit).flac
+/mnt/violet/Music/Tiësto/Club Life, Volume Four_ New York City/18 Zaxx & Riggi & Piros - Alpha.flac
+/mnt/violet/Music/Tigerwine/Nothing is for You/01 Anteroom.mp3
+/mnt/violet/Music/Tigerwine/Nothing is for You/02 Technicolor Yawn.mp3
+/mnt/violet/Music/Tigerwine/Nothing is for You/03 Scarecrow.mp3
+/mnt/violet/Music/Tigerwine/Nothing is for You/04 Black Water.mp3
+/mnt/violet/Music/Tigerwine/Nothing is for You/05 Salt.mp3
+/mnt/violet/Music/Tigerwine/Nothing is for You/06 Wigwam.mp3
+/mnt/violet/Music/Tigerwine/Nothing is for You/07 Word Hoard.mp3
+/mnt/violet/Music/Tigerwine/Nothing is for You/08 Hiss at the Sun.mp3
+/mnt/violet/Music/Tigerwine/Nothing is for You/09 Nothing is for You.mp3
+/mnt/violet/Music/Tigerwine/Nothing is for You/10 Complete.mp3
+/mnt/violet/Music/TOMORROW X TOGETHER/The Dream Chapter_ STAR/01 Blue Orangeade.mp3
+/mnt/violet/Music/TOMORROW X TOGETHER/The Dream Chapter_ STAR/02 어느날 머리에서 뿔이 자랐다 (CROWN).mp3
+/mnt/violet/Music/TOMORROW X TOGETHER/The Dream Chapter_ STAR/03 Our Summer.mp3
+/mnt/violet/Music/TOMORROW X TOGETHER/The Dream Chapter_ STAR/04 Cat & Dog.mp3
+/mnt/violet/Music/TOMORROW X TOGETHER/The Dream Chapter_ STAR/05 별의 낮잠.mp3
+/mnt/violet/Music/Trapt/Trapt/01 Headstrong.flac
+/mnt/violet/Music/Trapt/Trapt/02 Made of Glass.flac
+/mnt/violet/Music/Trapt/Trapt/03 Hollowman.flac
+/mnt/violet/Music/Trapt/Trapt/04 These Walls.flac
+/mnt/violet/Music/Trapt/Trapt/05 Still Frame.flac
+/mnt/violet/Music/Trapt/Trapt/06 Echo.flac
+/mnt/violet/Music/Trapt/Trapt/07 The Game.flac
+/mnt/violet/Music/Trapt/Trapt/08 When All Is Said and Done.flac
+/mnt/violet/Music/Trapt/Trapt/09 Enigma.flac
+/mnt/violet/Music/Trapt/Trapt/10 Stories.flac
+/mnt/violet/Music/Trapt/Trapt/11 New Beginning.flac
+/mnt/violet/Music/Travis Scott/ASTROWORLD/01 STARGAZING.flac
+/mnt/violet/Music/Travis Scott/ASTROWORLD/02 CAROUSEL.flac
+/mnt/violet/Music/Travis Scott/ASTROWORLD/03 SICKO MODE.flac
+/mnt/violet/Music/Travis Scott/ASTROWORLD/04 R.I.P. SCREW.flac
+/mnt/violet/Music/Travis Scott/ASTROWORLD/05 STOP TRYING TO BE GOD.flac
+/mnt/violet/Music/Travis Scott/ASTROWORLD/06 NO BYSTANDERS.flac
+/mnt/violet/Music/Travis Scott/ASTROWORLD/07 SKELETONS.flac
+/mnt/violet/Music/Travis Scott/ASTROWORLD/08 WAKE UP.flac
+/mnt/violet/Music/Travis Scott/ASTROWORLD/09 5% TINT.flac
+/mnt/violet/Music/Travis Scott/ASTROWORLD/10 NC‐17.flac
+/mnt/violet/Music/Travis Scott/ASTROWORLD/11 ASTROTHUNDER.flac
+/mnt/violet/Music/Travis Scott/ASTROWORLD/12 YOSEMITE.flac
+/mnt/violet/Music/Travis Scott/ASTROWORLD/13 CAN’T SAY.flac
+/mnt/violet/Music/Travis Scott/ASTROWORLD/14 WHO_ WHAT!.flac
+/mnt/violet/Music/Travis Scott/ASTROWORLD/15 BUTTERFLY EFFECT.flac
+/mnt/violet/Music/Travis Scott/ASTROWORLD/16 HOUSTONFORNICATION.flac
+/mnt/violet/Music/Travis Scott/ASTROWORLD/17 COFFEE BEAN.flac
+/mnt/violet/Music/Travis Scott/UTOPIA/01 Travis Scott - HYAENA.flac
+/mnt/violet/Music/Travis Scott/UTOPIA/02 Travis Scott - THANK GOD.flac
+/mnt/violet/Music/Travis Scott/UTOPIA/03 Travis Scott feat. Teezo Touchdown - MODERN JAM.flac
+/mnt/violet/Music/Travis Scott/UTOPIA/04 Travis Scott - MY EYES.flac
+/mnt/violet/Music/Travis Scott/UTOPIA/05 Travis Scott - GOD’S COUNTRY.flac
+/mnt/violet/Music/Travis Scott/UTOPIA/06 Travis Scott - SIRENS.flac
+/mnt/violet/Music/Travis Scott/UTOPIA/07 Travis Scott feat. Drake - MELTDOWN.flac
+/mnt/violet/Music/Travis Scott/UTOPIA/08 Travis Scott feat. Playboi Carti - FE!N.flac
+/mnt/violet/Music/Travis Scott/UTOPIA/09 Travis Scott feat. Beyoncé - DELRESTO (ECHOES).flac
+/mnt/violet/Music/Travis Scott/UTOPIA/10 Travis Scott - I KNOW _.flac
+/mnt/violet/Music/Travis Scott/UTOPIA/11 Travis Scott feat. Rob49 & 21 Savage - TOPIA TWINS.flac
+/mnt/violet/Music/Travis Scott/UTOPIA/12 Travis Scott feat. The Weeknd & Swae Lee - CIRCUS MAXIMUS.flac
+/mnt/violet/Music/Travis Scott/UTOPIA/13 Travis Scott feat. Yung Lean & Dave Chappelle - PARASAIL.flac
+/mnt/violet/Music/Travis Scott/UTOPIA/14 Travis Scott feat. Young Thug - SKITZO.flac
+/mnt/violet/Music/Travis Scott/UTOPIA/15 Travis Scott feat. Westside Gunn - LOST FOREVER.flac
+/mnt/violet/Music/Travis Scott/UTOPIA/16 Travis Scott feat. Kid Cudi - LOOOVE.flac
+/mnt/violet/Music/Travis Scott/UTOPIA/17 Travis Scott feat. Bad Bunny & The Weeknd - K‐POP.flac
+/mnt/violet/Music/Travis Scott/UTOPIA/18 Travis Scott feat. SZA & Future - TELEKINESIS.flac
+/mnt/violet/Music/Travis Scott/UTOPIA/19 Travis Scott feat. James Blake & 21 Savage - TIL FURTHER NOTICE.flac
+/mnt/violet/Music/Tyler, The Creator/CHROMAKOPIA/01 Tyler, The Creator feat. Daniel Caesar - St. Chroma.flac
+/mnt/violet/Music/Tyler, The Creator/CHROMAKOPIA/02 Tyler, The Creator - Rah Tah Tah.flac
+/mnt/violet/Music/Tyler, The Creator/CHROMAKOPIA/03 Tyler, The Creator - Noid.flac
+/mnt/violet/Music/Tyler, The Creator/CHROMAKOPIA/04 Tyler, The Creator feat. Teezo Touchdown - Darling, I.flac
+/mnt/violet/Music/Tyler, The Creator/CHROMAKOPIA/05 Tyler, The Creator - Hey Jane.flac
+/mnt/violet/Music/Tyler, The Creator/CHROMAKOPIA/06 Tyler, The Creator - I Killed You.flac
+/mnt/violet/Music/Tyler, The Creator/CHROMAKOPIA/07 Tyler, The Creator - Judge Judy.flac
+/mnt/violet/Music/Tyler, The Creator/CHROMAKOPIA/08 Tyler, The Creator feat. GloRilla, Sexyy Red & Lil Wayne - Sticky.flac
+/mnt/violet/Music/Tyler, The Creator/CHROMAKOPIA/09 Tyler, The Creator feat. Daniel Caesar & LaToiya Williams - Take Your Mask Off.flac
+/mnt/violet/Music/Tyler, The Creator/CHROMAKOPIA/10 Tyler, The Creator - Tomorrow.flac
+/mnt/violet/Music/Tyler, The Creator/CHROMAKOPIA/11 Tyler, The Creator feat. ScHoolboy Q & Santigold - Thought I Was Dead.flac
+/mnt/violet/Music/Tyler, The Creator/CHROMAKOPIA/12 Tyler, The Creator feat. Lola Young - Like Him.flac
+/mnt/violet/Music/Tyler, The Creator/CHROMAKOPIA/13 Tyler, The Creator feat. Doechii - Balloon.flac
+/mnt/violet/Music/Tyler, The Creator/CHROMAKOPIA/14 Tyler, The Creator - I Hope You Find Your Way Home.flac
+/mnt/violet/Music/VIOLENT VIRA/Lover of a Ghost/01 Intro.flac
+/mnt/violet/Music/VIOLENT VIRA/Lover of a Ghost/02 Missing Posters.flac
+/mnt/violet/Music/VIOLENT VIRA/Lover of a Ghost/03 Burn Me With a Bible.flac
+/mnt/violet/Music/VIOLENT VIRA/Lover of a Ghost/04 Eat.flac
+/mnt/violet/Music/VIOLENT VIRA/Lover of a Ghost/05 Indie.flac
+/mnt/violet/Music/VIOLENT VIRA/Lover of a Ghost/06 Common Decency.flac
+/mnt/violet/Music/VIOLENT VIRA/Lover of a Ghost/07 Lil Crush.flac
+/mnt/violet/Music/VIOLENT VIRA/Lover of a Ghost/08 Wave in the Monitor.flac
+/mnt/violet/Music/VIOLENT VIRA/Lover of a Ghost/09 Interlude.flac
+/mnt/violet/Music/VIOLENT VIRA/Lover of a Ghost/10 Saccharine.flac
+/mnt/violet/Music/VIOLENT VIRA/Lover of a Ghost/11 Trap Nest.flac
+/mnt/violet/Music/VIOLENT VIRA/Lover of a Ghost/12 S.E.X. Narcissist.flac
+/mnt/violet/Music/VIOLENT VIRA/Lover of a Ghost/13 You Promised.flac
+/mnt/violet/Music/VIOLENT VIRA/Lover of a Ghost/14 Chasing Ghosts.flac
+/mnt/violet/Music/Zedd/Clarity (deluxe)/01 Zedd feat. LIZ - Hourglass.flac
+/mnt/violet/Music/Zedd/Clarity (deluxe)/02 Zedd - Shave It Up.flac
+/mnt/violet/Music/Zedd/Clarity (deluxe)/03 Zedd feat. Matthew Koma - Spectrum.flac
+/mnt/violet/Music/Zedd/Clarity (deluxe)/04 Zedd feat. Ryan Tedder - Lost at Sea.flac
+/mnt/violet/Music/Zedd/Clarity (deluxe)/05 Zedd feat. Foxes - Clarity.flac
+/mnt/violet/Music/Zedd/Clarity (deluxe)/06 Zedd - Codec.flac
+/mnt/violet/Music/Zedd/Clarity (deluxe)/07 Zedd - Stache.flac
+/mnt/violet/Music/Zedd/Clarity (deluxe)/08 Zedd & Lucky Date feat. Ellie Goulding - Fall Into the Sky.flac
+/mnt/violet/Music/Zedd/Clarity (deluxe)/09 Zedd feat. Bright Lights - Follow You Down.flac
+/mnt/violet/Music/Zedd/Clarity (deluxe)/10 Zedd - Epos.flac
+/mnt/violet/Music/Zedd/Clarity (deluxe)/11 Zedd feat. Hayley Williams of Paramore - Stay the Night.flac
+/mnt/violet/Music/Zedd/Clarity (deluxe)/12 Zedd feat. Miriam Bryant - Push Play.flac
+/mnt/violet/Music/Zedd/Clarity (deluxe)/13 Empire of the Sun & Zedd - Alive.flac
+/mnt/violet/Music/Zedd/Clarity (deluxe)/14 Skrillex & The Doors - Breakn’ a Sweat (Zedd remix).flac
+/mnt/violet/Music/Zedd/Clarity (deluxe)/15 Zedd - Clarity (remix).flac
+/mnt/violet/Music/Zedd/Clarity (deluxe)/16 Zedd - Stay the Night (Tiesto’s Club Life remix).flac
+/mnt/violet/Music/Zedd/Clarity (deluxe)/17 Zedd feat. Matthew Koma & Miriam Bryant - Find You.flac
+/mnt/violet/Music/Zedd/True Colors/01 Zedd feat. Bahari - Addicted to a Memory.flac
+/mnt/violet/Music/Zedd/True Colors/02 Zedd feat. Selena Gomez - I Want You to Know.flac
+/mnt/violet/Music/Zedd/True Colors/03 Zedd feat. Jon Bellion - Beautiful Now.flac
+/mnt/violet/Music/Zedd/True Colors/04 Zedd feat. Logic & X Ambassadors - Transmission.flac
+/mnt/violet/Music/Zedd/True Colors/05 Zedd - Done With Love.flac
+/mnt/violet/Music/Zedd/True Colors/06 Zedd - True Colors.flac
+/mnt/violet/Music/Zedd/True Colors/07 Zedd - Straight Into the Fire.flac
+/mnt/violet/Music/Zedd/True Colors/08 Zedd feat. Troye Sivan - Papercut.flac
+/mnt/violet/Music/Zedd/True Colors/09 Zedd & Botnek - Bumble Bee.flac
+/mnt/violet/Music/Zedd/True Colors/10 Zedd - Daisy.flac
+/mnt/violet/Music/Zedd/True Colors/11 Zedd feat. Echosmith - Illusion.flac
+/mnt/violet/Music/ZICO/Gallery/01 ZICOfeat.DJ Wegun - VENI VIDI VICI.mp3
+/mnt/violet/Music/ZICO/Gallery/02 ZICOfeat.Zion.T - 유레카 (Eureka).mp3
+/mnt/violet/Music/ZICO/Gallery/03 ZICO - 오만과 편견 (Feat. 수란).mp3
+/mnt/violet/Music/ZICO/Gallery/04 ZICO - Boys And Girls (Feat. Babylon).mp3
+/mnt/violet/Music/ZICO/Gallery/06 ZICO - 말해 Yes Or No (Feat. PENOMECO, The Quiett).mp3
+/mnt/violet/Music/ZICO/TELEVISION/01 ZICO - 천재 (Behind the scene).mp3
+/mnt/violet/Music/ZICO/TELEVISION/02 ZICO - Artist.mp3
+/mnt/violet/Music/ZICO/TELEVISION/03 ZICO feat. G.Soul - ANTI.mp3
+/mnt/violet/Music/ZICO/TELEVISION/04 ZICO feat. FANXY CHILD - FANXY CHILD.mp3
+/mnt/violet/Music/ZICO/TELEVISION/05 ZICO - She's a Baby.mp3
 /mnt/violet/Music/Given/gift/01 Yorugaakeru.flac
 /mnt/violet/Music/Given/gift/02 Hetakuso.flac
 /mnt/violet/Music/Given/gift/03 Stagekara kiminisasagu.flac
@@ -1246,3 +1693,9 @@
 /mnt/violet/Music/Given/gift/06 Yorugaakeru (instrumental).flac
 /mnt/violet/Music/Given/gift/07 Hetakuso (instrumental).flac
 /mnt/violet/Music/Given/gift/08 Stagekara kiminisasagu (instrumental).flac
+/mnt/violet/Music/威神V/Take Off/01 无翼而飞 (Take Off).mp3
+/mnt/violet/Music/威神V/Take Off/02 理所当然 (Regular).mp3
+/mnt/violet/Music/威神V/Take Off/03 真实谎言 (Say It).mp3
+/mnt/violet/Music/威神V/Take Off/04 噩梦 (Come Back).mp3
+/mnt/violet/Music/威神V/Take Off/05 爱不释手 (Let Me Love U).mp3
+/mnt/violet/Music/威神V/Take Off/06 梦想发射计划 (Dream Launch).mp3

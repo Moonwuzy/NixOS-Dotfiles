@@ -9,7 +9,6 @@
     ../../modules/core/users.nix
     ../../modules/core/audio.nix
     ../../modules/core/services.nix
-    ../../modules/core/sway.nix
     ../../modules/core/niri.nix
     ../../modules/core/gaming.nix
     ../../modules/core/packages.nix

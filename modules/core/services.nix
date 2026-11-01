@@ -13,7 +13,12 @@
 
   home-manager.users.moonwuzy = { pkgs, ... }: {
     home.stateVersion = "26.05";
-
+    
+    nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (pkgs.lib.getName pkg) [
+      "posy-cursors"
+    ];
+    
     gtk = {
       enable = true;
       colorScheme = "dark";
@@ -26,11 +31,15 @@
         package = pkgs.adwaita-icon-theme;
       };
       cursorTheme = {
-        name = "Adwaita";
-        package = pkgs.adwaita-icon-theme;
-        size = 20;
+        name = "Posy_Cursor";
+        package = pkgs.posy-cursors;
+        size = 32;
       };
-    };
+   };
+      home.sessionVariables = {
+      XCURSOR_THEME = "Posy_Cursor";
+      XCURSOR_SIZE = "32";
+      };
 
     dconf.settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
 
@@ -63,15 +72,17 @@
   services.xserver.enable = true;
   services.xserver.dpi = 96;
   services.desktopManager.plasma6.enable = false;
+  services.upower.enable = true;
+
   services.displayManager.sddm = {
     enable = true;
-    wayland.enable = true;
+    wayland.enable = lib.mkForce true;
   };
 
-  programs.qylock = {
-    enable = true;
-    theme = "pixel-coffee";
-  };
+  programs.silentSDDM = {
+        enable = true;
+        theme = "nord";
+      };
 
   services.udisks2.enable = true;
   services.gvfs.enable = true;
@@ -84,6 +95,9 @@
   enable = true;
   scheduler = "scx_rustland";
   };
+
+  # Vice
+  services.vice.enable = true;
    
   programs.dconf.enable = true;
   programs.xfconf.enable = true;
@@ -107,4 +121,5 @@
     enableZshIntegration = true;
     nix-direnv.enable = true;
   };
+
 }

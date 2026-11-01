@@ -1,4 +1,5 @@
-{ lib, ... }:
+
+{ lib, inputs, ... }:
 
 {
   imports = [
@@ -9,7 +10,6 @@
     ../../modules/core/users.nix
     ../../modules/core/audio.nix
     ../../modules/core/services.nix
-    ../../modules/core/sway.nix
     ../../modules/core/niri.nix
     ../../modules/core/gaming.nix
     ../../modules/core/packages.nix
@@ -17,16 +17,33 @@
     ../../modules/desktop/swap.nix
     ../../modules/desktop/graphics.nix
     ../../modules/core/virtualization.nix
+
+    # Umbriel NixOS module
+    inputs.umbriel.nixosModules.default
   ];
 
+  # Umbriel compositor
+  programs.umbriel.enable = true;
+
   networking.hostName = "mafuyu";
+
+  services.hardware.openrgb = {
+    enable = true;
+    motherboard = "amd";
+  };
+
   networking.firewall.trustedInterfaces = [ "eno1" ];
+
   networking.extraHosts = ''
     0.0.0.0 test-s1.battleye.com
     0.0.0.0 paradiseenhanced-s1.battleye.com
   '';
 
-  users.users.moonwuzy.extraGroups = [ "video" "render" ];
+  users.users.moonwuzy.extraGroups = [
+    "video"
+    "render"
+    "input"
+  ];
 
   boot.supportedFilesystems = [ "ntfs" ];
   time.hardwareClockInLocalTime = false;
@@ -40,14 +57,87 @@
   fileSystems."/mnt/hdd" = {
     device = "/dev/disk/by-uuid/08BEF504BEF4EAD8";
     fsType = "ntfs3";
-    options = [ "nofail" "uid=1000" "gid=100" "umask=022" ];
+    options = [
+      "nofail"
+      "uid=1000"
+      "gid=100"
+      "umask=022"
+    ];
   };
 
-  home-manager.users.moonwuzy = {
-    
-  home.sessionVariables = {
-  NIXOS_OZONE_WL = "1";
-  };
+  home-manager.users.moonwuzy = { inputs, ... }: {
+
+    imports = [
+      inputs.serpantinum.homeManagerModules.default
+      inputs.noctalia.homeModules.default
+    ];
+
+    # Serpantinum
+    systemd.user.services.serpantinum.Service.Environment =
+      "QML2_IMPORT_PATH=/nix/store/qfqa0b1fjxgl641xiwdhrlgbav6zr34a-qtdeclarative-6.12.0/lib/qt-6/qml";
+
+    programs.serpantinum = {
+      enable = true;
+      systemd.enable = false;
+
+      settings = {
+        wallpaperDir = "/home/moonwuzy/Pictures/Wallpapers";
+
+        general = {
+          language = "en";
+          weatherUnit = "metric";
+          weatherInterval = 30;
+        };
+
+        bar = {
+          position = "top";
+          style = "solid";
+          width = 40;
+          workspaceCount = 10;
+
+          modules = {
+            left = [ "workspaces" ];
+            center = [ "time" ];
+            right = [ "tray" [ "kb" "wifi" "bt" "vol" "bat" ] ];
+          };
+        };
+
+        theme = {
+          fontFamily = "Adwaita Mono";
+          borderRadius = 12;
+          matugen = true;
+        };
+
+        notifications = {
+          dnd = false;
+          position = "top right";
+          sound = true;
+        };
+      };
+    };
+
+    # Noctalia
+    programs.noctalia = {
+      enable = true;
+      systemd.enable = true;
+
+      settings = {
+        theme = {
+          mode = "dark";
+          source = "builtin";
+          builtin = "Catppuccin";
+        };
+
+        wallpaper = {
+          enabled = true;
+          default.path = "/home/moonwuzy/Pictures/Wallpapers/violet.jpg";
+        };
+      };
+    };
+
+    home.sessionVariables = {
+      NIXOS_OZONE_WL = "1";
+    };
 
     xdg.configFile."sway/desktop.conf".text = ''
       # Cursor
@@ -64,6 +154,6 @@
       lib.mkForce ../../home/moonwuzy/.config/wofi/desktop-style.css;
 
     xdg.configFile."kitty/kitty.conf".source =
-      lib.mkForce ../../home/moonwuzy/.config/kitty/kitty.conf;   
+      lib.mkForce ../../home/moonwuzy/.config/kitty/kitty.conf;
   };
 }

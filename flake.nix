@@ -3,11 +3,11 @@
 
   inputs = {
     # NixOS packages
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Home Manager
     home-manager = {
-      url = "github:nix-community/home-manager/release-26.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -28,7 +28,7 @@
 
     # CachyOS kernel
     nix-cachyos-kernel.url =
-      "github:xddxdd/nix-cachyos-kernel/release";
+      "github:xddxdd/nix-cachyos-kernel";
 
     # Zen Browser
     zen-browser = {
@@ -42,10 +42,32 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
      
-    # qylock
-    qylock.url = "github:Darkkal44/qylock";
     # spotatui
     spotatui.url = "github:LargeModGames/spotatui";
+
+    # Serpantinum
+    serpantinum.url = "github:ilyamiro/serpantinum";
+    
+    noctalia = {
+    url = "github:noctalia-dev/noctalia/cachix";
+    };
+
+   umbriel = {
+   url = "github:noctalia-dev/umbriel";
+   };
+
+    silentSDDM = {
+      url = "github:uiriansan/SilentSDDM";
+      inputs.nixpkgs.follows = "nixpkgs";
+      };
+      
+     # Vice
+     vice.url = "github:splitshotz/Vice";
+    
+     nixgram = {
+     url = "github:Moonwuzy/Nixgram";
+     inputs.nixpkgs.follows = "nixpkgs";
+     };
 
     };
 
@@ -57,7 +79,7 @@
       proton-cachyos,
       nix-flatpak,
       nix-cachyos-kernel,
-      qylock,
+      vice,
       ...
     }:
     let
@@ -104,8 +126,22 @@
       commonModules = [
         home-manager.nixosModules.home-manager
         inputs.steam-config-nix.nixosModules.default
+        inputs.silentSDDM.nixosModules.default
 
         {
+          home-manager.extraSpecialArgs = { inherit inputs; };
+          
+          nix.settings = {
+          extra-substituters = [
+          "https://noctalia.cachix.org"
+          ];
+
+          extra-trusted-public-keys = [
+          "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+          ];
+         };
+          
+
           nixpkgs.overlays = [
             nix-cachyos-kernel.overlays.pinned
           ];
@@ -123,10 +159,11 @@
 
           specialArgs = {
             inherit inputs;
+            serpantinum = inputs.serpantinum;
           };
 
           modules = [
-            qylock.nixosModules.default
+            vice.nixosModules.default
             ./hosts/laptop/configuration.nix
           ] ++ commonModules;
         };
@@ -137,11 +174,13 @@
 
           specialArgs = {
             inherit inputs;
+            serpantinum = inputs.serpantinum;
           };
 
           modules = [
-            qylock.nixosModules.default
+            vice.nixosModules.default
             ./hosts/desktop/configuration.nix
+       
           ] ++ commonModules;
         };
       };
