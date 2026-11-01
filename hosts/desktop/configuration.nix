@@ -1,5 +1,4 @@
-
-{ lib, inputs, ... }:
+{ lib, inputs, pkgs, ... }:
 
 {
   imports = [
@@ -18,11 +17,9 @@
     ../../modules/desktop/graphics.nix
     ../../modules/core/virtualization.nix
 
-    # Umbriel NixOS module
     inputs.umbriel.nixosModules.default
   ];
 
-  # Umbriel compositor
   programs.umbriel.enable = true;
 
   networking.hostName = "mafuyu";
@@ -66,7 +63,6 @@
   };
 
   home-manager.users.moonwuzy = { inputs, ... }: {
-
     imports = [
       inputs.serpantinum.homeManagerModules.default
       inputs.noctalia.homeModules.default
@@ -74,7 +70,7 @@
 
     # Serpantinum
     systemd.user.services.serpantinum.Service.Environment =
-      "QML2_IMPORT_PATH=/nix/store/qfqa0b1fjxgl641xiwdhrlgbav6zr34a-qtdeclarative-6.12.0/lib/qt-6/qml";
+      "QML2_IMPORT_PATH=${pkgs.qt6.qtdeclarative}/lib/qt-6/qml";
 
     programs.serpantinum = {
       enable = true;
@@ -139,21 +135,47 @@
       NIXOS_OZONE_WL = "1";
     };
 
-    xdg.configFile."sway/desktop.conf".text = ''
-      # Cursor
-      seat * xcursor_theme Adwaita 20
-    '';
+    xdg.configFile = {
+      # Niri
+      "niri/config.kdl".source =
+        ../../home/moonwuzy/.config/niri/config.kdl;
 
-    xdg.configFile."waybar/config".source =
-      ../../home/moonwuzy/.config/waybar/desktop-config;
+      "niri/cursor.kdl".source =
+        ../../home/moonwuzy/.config/niri/cursor.kdl;
 
-    xdg.configFile."waybar/style.css".source =
-      lib.mkForce ../../home/moonwuzy/.config/waybar/desktop-style.css;
+      "niri/tilemod_config.toml".source =
+        ../../home/moonwuzy/.config/niri/tilemod_config.toml;
 
-    xdg.configFile."wofi/style.css".source =
-      lib.mkForce ../../home/moonwuzy/.config/wofi/desktop-style.css;
+      "niri/scripts".source =
+        ../../home/moonwuzy/.config/niri/scripts;
 
-    xdg.configFile."kitty/kitty.conf".source =
-      lib.mkForce ../../home/moonwuzy/.config/kitty/kitty.conf;
+      # Umbriel
+      "umbriel/config.toml".source =
+        ../../home/moonwuzy/.config/umbriel/config.toml;
+
+      "umbriel/outputs.toml".source =
+        ../../home/moonwuzy/.config/umbriel/outputs.toml;
+
+      "umbriel/cursor.toml".source =
+        ../../home/moonwuzy/.config/umbriel/cursor.toml;
+
+      # Desktop-specific settings
+      "sway/desktop.conf".text = ''
+        # Cursor
+        seat * xcursor_theme Adwaita 20
+      '';
+
+      "waybar/config".source =
+        ../../home/moonwuzy/.config/waybar/desktop-config;
+
+      "waybar/style.css".source =
+        lib.mkForce ../../home/moonwuzy/.config/waybar/desktop-style.css;
+
+      "wofi/style.css".source =
+        lib.mkForce ../../home/moonwuzy/.config/wofi/desktop-style.css;
+
+      "kitty/kitty.conf".source =
+        lib.mkForce ../../home/moonwuzy/.config/kitty/kitty.conf;
+    };
   };
 }

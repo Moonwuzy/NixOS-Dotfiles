@@ -1,5 +1,4 @@
-
-{ inputs, lib, pkgs, ... }:
+{ lib, inputs, pkgs, ... }:
 
 {
   imports = [
@@ -19,14 +18,13 @@
     ../../modules/laptop/graphics.nix
     ../../modules/laptop/power.nix
 
-    # Shared desktop applications
+    # Umbriel
     inputs.umbriel.nixosModules.default
   ];
 
-  networking.hostName = "yaoilover";
-
-  # Umbriel
   programs.umbriel.enable = true;
+
+  networking.hostName = "yaoilover";
 
   home-manager.users.moonwuzy = { inputs, ... }: {
     imports = [
@@ -101,33 +99,55 @@
       NIXOS_OZONE_WL = "1";
     };
 
-    # Laptop-specific keybindings
-    xdg.configFile."sway/laptop.conf".text = ''
-      bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-      bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-      bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ --limit 1.0
+    xdg.configFile = {
+      # Shared Niri configuration
+      "niri/config.kdl".source =
+        ../../home/moonwuzy/.config/niri/config.kdl;
 
-      bindsym XF86MonBrightnessDown exec brightnessctl -d intel_backlight set 5%-
-      bindsym XF86MonBrightnessUp exec brightnessctl -d intel_backlight set 5%+
+      "niri/cursor.kdl".source =
+        ../../home/moonwuzy/.config/niri/cursor.kdl;
 
-      bindsym XF86KbdBrightnessDown exec asusctl leds prev
-      bindsym XF86KbdBrightnessUp exec asusctl leds next
-      bindsym XF86Launch1 exec asusctl profile next
-    '';
+      "niri/tilemod_config.toml".source =
+        ../../home/moonwuzy/.config/niri/tilemod_config.toml;
 
-    # Laptop-specific Waybar layout
-    xdg.configFile."waybar/config".source =
-      ../../home/moonwuzy/.config/waybar/laptop-config;
+      "niri/scripts".source =
+        ../../home/moonwuzy/.config/niri/scripts;
 
-    # Shared desktop styling
-    xdg.configFile."waybar/style.css".source =
-      lib.mkForce ../../home/moonwuzy/.config/waybar/desktop-style.css;
+      # Shared Umbriel configuration
+      "umbriel/config.toml".source =
+        ../../home/moonwuzy/.config/umbriel/config.toml;
 
-    xdg.configFile."wofi/style.css".source =
-      lib.mkForce ../../home/moonwuzy/.config/wofi/desktop-style.css;
+      "umbriel/cursor.toml".source =
+        ../../home/moonwuzy/.config/umbriel/cursor.toml;
 
-    xdg.configFile."kitty/kitty.conf".source =
-      lib.mkForce ../../home/moonwuzy/.config/kitty/kitty.conf;
+      # Laptop-specific keybindings
+      "sway/laptop.conf".text = ''
+        bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+        bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+        bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ --limit 1.0
+
+        bindsym XF86MonBrightnessDown exec brightnessctl -d intel_backlight set 5%-
+        bindsym XF86MonBrightnessUp exec brightnessctl -d intel_backlight set 5%+
+
+        bindsym XF86KbdBrightnessDown exec asusctl leds prev
+        bindsym XF86KbdBrightnessUp exec asusctl leds next
+        bindsym XF86Launch1 exec asusctl profile next
+      '';
+
+      # Laptop-specific Waybar layout
+      "waybar/config".source =
+        ../../home/moonwuzy/.config/waybar/laptop-config;
+
+      # Shared styling
+      "waybar/style.css".source =
+        lib.mkForce ../../home/moonwuzy/.config/waybar/desktop-style.css;
+
+      "wofi/style.css".source =
+        lib.mkForce ../../home/moonwuzy/.config/wofi/desktop-style.css;
+
+      "kitty/kitty.conf".source =
+        lib.mkForce ../../home/moonwuzy/.config/kitty/kitty.conf;
+    };
   };
 
   fileSystems."/mnt/holiday" = {
