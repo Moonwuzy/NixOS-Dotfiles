@@ -11,7 +11,6 @@
     # My Packages
     inputs.nixgram.packages.${pkgs.stdenv.hostPlatform.system}.default   
 
-
     # Misc
     wget
     rustfmt    
@@ -103,6 +102,7 @@
     libX11
     libXinerama
     libXcursor
+    xinit
 
     # Gaming
     wineWow64Packages.stable

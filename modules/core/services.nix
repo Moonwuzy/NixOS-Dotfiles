@@ -89,14 +89,10 @@
 
     services.displayManager.noctalia-greeter = {
     enable = true;
+    passwordlessSyncUsers = [ "moonwuzy" ];
 
     settings = {
-      appearance.wallpaper = {
-        path = "${../../home/moonwuzy/Pictures/Wallpapers/violet.jpg}";
-        fill_mode = "crop";
-      };
       appearance.hide_logo = true;
-
       output = {
       name = "DP-2";
       mode = "2560x1440@180";
@@ -104,9 +100,8 @@
     };
   };
 
-  services.greetd.settings.default_session.user = "greeter";
- 
-
+  services.greetd.settings.default_session.user = "greeter"; 
+  
   # Vice
   services.vice.enable = true;
    
