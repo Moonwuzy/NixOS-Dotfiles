@@ -9,13 +9,13 @@
     ../../modules/core/users.nix
     ../../modules/core/audio.nix
     ../../modules/core/services.nix
-    ../../modules/core/niri.nix
+    ../../modules/core/home.nix
     ../../modules/core/gaming.nix
     ../../modules/core/packages.nix
-    ../../modules/desktop/zram.nix
     ../../modules/desktop/swap.nix
     ../../modules/desktop/graphics.nix
     ../../modules/core/virtualization.nix
+    ../../modules/core/vice.nix
 
     inputs.umbriel.nixosModules.default
   ];
@@ -111,8 +111,18 @@
         };
       };
     };
-
-    # Noctalia
+  
+  # Spelunkr
+  xdg.desktopEntries.spelunkr = {
+  name = "Spelunkr";
+  comment = "Retro live television";
+  exec = "vivaldi --ozone-platform=wayland --app=https://spelunkr.tv";
+  icon = "vivaldi";
+  terminal = false;
+  categories = [ "AudioVideo" "Video" "Network" ];
+  };
+  
+  # Noctalia
     programs.noctalia = {
       enable = true;
       systemd.enable = true;

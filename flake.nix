@@ -63,13 +63,23 @@
       
      # Vice
      vice.url = "github:splitshotz/Vice";
-    
+     
+     # Nixgram    
      nixgram = {
      url = "github:Moonwuzy/Nixgram";
      inputs.nixpkgs.follows = "nixpkgs";
      };
-
-    };
+    
+     # Millennium
+     millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
+     
+     # Ski
+     ski = {
+     url = "github:ilyamiro/Ski";
+     flake = false;
+     };
+    
+     };
 
   outputs =
     inputs@{
@@ -124,13 +134,13 @@
 
       # Shared configuration for both machines
       commonModules = [
+        (inputs.ski + "/nix/module.nix")
         home-manager.nixosModules.home-manager
         inputs.steam-config-nix.nixosModules.default
         inputs.silentSDDM.nixosModules.default
 
-        {
-          home-manager.extraSpecialArgs = { inherit inputs; };
-          
+          { home-manager.extraSpecialArgs = { inherit inputs; };          
+
           nix.settings = {
           extra-substituters = [
           "https://noctalia.cachix.org"
@@ -144,10 +154,18 @@
 
           nixpkgs.overlays = [
             nix-cachyos-kernel.overlays.pinned
+            inputs.millennium.overlays.default
           ];
-
+          
+          # Programs
           programs.steam.extraCompatPackages =
-            steamCompatPackages;
+          steamCompatPackages;
+           
+          programs.ski = {
+          enable = true;
+          defaultFileManager = true;
+          filePicker = true;
+          };
         }
       ];
     in

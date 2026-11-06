@@ -9,7 +9,7 @@
     ../../modules/core/users.nix
     ../../modules/core/audio.nix
     ../../modules/core/services.nix
-    ../../modules/core/niri.nix
+    ../../modules/core/home.nix
     ../../modules/core/gaming.nix
     ../../modules/core/packages.nix
 

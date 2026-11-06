@@ -67,44 +67,51 @@
       }
     '';
   };
-
-  services.greetd.enable = lib.mkForce false;
+  
+  # Services
   services.xserver.enable = true;
   services.xserver.dpi = 96;
   services.desktopManager.plasma6.enable = false;
   services.upower.enable = true;
-
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = lib.mkForce true;
-  };
-
-  programs.silentSDDM = {
-        enable = true;
-        theme = "nord";
-      };
-
   services.udisks2.enable = true;
   services.gvfs.enable = true;
   services.tumbler.enable = true;
   services.gnome.gnome-keyring.enable = true;
-  
   services.lact.enable = true;
+   
+  # Greeter
+  users.groups.greeter = {};
 
-  services.scx = {
-  enable = true;
-  scheduler = "scx_rustland";
+  users.users.greeter = {
+    isSystemUser = true;
+    group = "greeter";
   };
+
+    services.displayManager.noctalia-greeter = {
+    enable = true;
+
+    settings = {
+      appearance.wallpaper = {
+        path = "${../../home/moonwuzy/Pictures/Wallpapers/violet.jpg}";
+        fill_mode = "crop";
+      };
+      appearance.hide_logo = true;
+
+      output = {
+      name = "DP-2";
+      mode = "2560x1440@180";
+      };
+    };
+  };
+
+  services.greetd.settings.default_session.user = "greeter";
+ 
 
   # Vice
   services.vice.enable = true;
    
   programs.dconf.enable = true;
   programs.xfconf.enable = true;
-  programs.thunar = {
-    enable = true;
-    plugins = with pkgs; [ thunar-volman thunar-archive-plugin ];
-  };
 
   programs.obs-studio = {
     enable = true;

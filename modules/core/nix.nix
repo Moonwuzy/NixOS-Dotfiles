@@ -20,11 +20,31 @@
     })
   ];
 
-  programs.nix-ld = {
-    enable = true;
-    libraries = with pkgs; [
-      libGL libGLX mesa libgbm libX11 libxcb xcb-util-cursor
-      libxkbcommon wayland fontconfig stdenv.cc.cc.lib nss nspr
-    ];
-  };
+ programs.nix-ld = {
+  enable = true;
+  libraries = with pkgs; [
+    # Graphics
+    libGL
+    libGLX
+    mesa
+    libgbm
+    libdecor
+
+    # X11 / Wayland
+    libX11
+    libxcb
+    xcb-util-cursor
+    libxkbcommon
+    wayland
+
+    # Runtime
+    fontconfig
+    stdenv.cc.cc.lib
+    nss
+    nspr
+
+    # Networking
+    curlFull
+  ];
+ };
 }

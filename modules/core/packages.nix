@@ -6,18 +6,15 @@
     nirimod
     blanket
   ];
-
-  environment.systemPackages = with pkgs; [
+ 
+    environment.systemPackages = with pkgs; [
     # My Packages
     inputs.nixgram.packages.${pkgs.stdenv.hostPlatform.system}.default   
 
 
     # Misc
     wget
-    curl
-    rustfmt
-    
-    
+    rustfmt    
 
     # Desktop
     vivaldi
@@ -102,6 +99,10 @@
     gh
     alsa-lib
     openssl
+    pkg-config
+    libX11
+    libXinerama
+    libXcursor
 
     # Gaming
     wineWow64Packages.stable
@@ -145,10 +146,13 @@
     patch
     xdg-user-dirs
     upower
-    lutris
     socat
     mpvpaper
-    bazaar
+    btop
+    godot
+    fuse-overlayfs
+    
+    ryubing
   ];
 
   fonts = {

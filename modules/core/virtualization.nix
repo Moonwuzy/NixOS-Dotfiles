@@ -8,7 +8,7 @@
     qemu = {
       package = pkgs.qemu_kvm;
       swtpm.enable = true;
-    };
+      };
   };
 
   programs.virt-manager.enable = true;
