@@ -1,6 +1,9 @@
 { pkgs, inputs, ... }:
 
 {
+  home-manager.users.moonwuzy.home.file.".config/fish/config.fish".source =
+  ../../home/moonwuzy/.config/fish/config.fish;
+ 
   home-manager.users.moonwuzy.home.packages = with pkgs; [
     pywal
     nirimod
@@ -86,9 +89,6 @@
     python3
     gnumake
     easyeffects
-    fzf
-    zsh-fzf-tab
-    zoxide
     wayland-utils
     mediawriter
     mission-center
@@ -135,11 +135,19 @@
     unityhub
     alcom
    
-   # Social
     whatsapp-electron
     procps
     cabextract
-    vesktop
+    
+    # Terminal
+    circumflex
+    bat
+    eza
+    trash-cli
+    starship
+    fzf
+    zoxide 
+
     ani-cli
     yt-dlp
     ani-skip
@@ -151,8 +159,8 @@
     btop
     godot
     fuse-overlayfs
-    
     ryubing
+
   ];
 
   fonts = {
