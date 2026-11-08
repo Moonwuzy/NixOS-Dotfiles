@@ -1,3 +1,4 @@
+
 {
   description = "My NixOS configuration";
 
@@ -41,45 +42,44 @@
       url = "github:different-name/steam-config-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-     
+
     # spotatui
     spotatui.url = "github:LargeModGames/spotatui";
 
     # Serpantinum
     serpantinum.url = "github:ilyamiro/serpantinum";
-    
-    noctalia = {
-    url = "github:noctalia-dev/noctalia/cachix";
-    };
 
-   umbriel = {
-   url = "github:noctalia-dev/umbriel";
-   };
+    # Noctalia
+    noctalia.url = "github:noctalia-dev/noctalia/cachix";
 
+    # Umbriel
+    umbriel.url = "github:noctalia-dev/umbriel";
+
+    # SilentSDDM
     silentSDDM = {
       url = "github:uiriansan/SilentSDDM";
       inputs.nixpkgs.follows = "nixpkgs";
-      };
-      
-     # Vice
-     vice.url = "github:splitshotz/Vice";
-     
-     # Nixgram    
-     nixgram = {
-     url = "github:Moonwuzy/Nixgram";
-     inputs.nixpkgs.follows = "nixpkgs";
-     };
-    
-     # Millennium
-     millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
-     
-     # Ski
-     ski = {
-     url = "github:ilyamiro/Ski";
-     flake = false;
-     };
-    
-     };
+    };
+
+    # Vice
+    vice.url = "github:splitshotz/Vice";
+
+    # Nixgram
+    nixgram = {
+      url = "github:Moonwuzy/Nixgram";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Millennium
+    millennium.url =
+      "github:SteamClientHomebrew/Millennium?dir=packages/nix";
+
+    # Ski
+    ski = {
+      url = "github:ilyamiro/Ski";
+      flake = false;
+    };
+  };
 
   outputs =
     inputs@{
@@ -96,38 +96,50 @@
       # Shared Steam compatibility packages for both machines
       steamCompatPackages =
         let
-          cachy = proton-cachyos.packages.x86_64-linux;
-          ge = inputs.proton-ge.packages.x86_64-linux;
+          cachy = proton-cachyos.packages.x86_64-linux.default;
+          ge = inputs.proton-ge.packages.x86_64-linux.default;
 
           cachyNamed = package:
-            package.override {
-              steamDisplayName =
+            let
+              display =
                 "Proton-CachyOS ${
                   builtins.replaceStrings
                     [ "cachyos-" "-slr" ]
                     [ "" "" ]
                     package.version
                 } (Steam Linux Runtime)";
-            };
+            in
+            package.overrideAttrs (old: {
+              inherit display;
+              passthru = (old.passthru or { }) // {
+                inherit display;
+              };
+            });
 
           geNamed = package:
-            package.override {
-              steamDisplayName =
+            let
+              display =
                 "GE-Proton ${
                   builtins.replaceStrings
                     [ "GE-Proton" ]
                     [ "" ]
                     package.version
                 } (Steam Linux Runtime)";
-            };
+            in
+            package.overrideAttrs (old: {
+              inherit display;
+              passthru = (old.passthru or { }) // {
+                inherit display;
+              };
+            });
         in
         [
           # Proton-CachyOS
-          (cachyNamed cachy.default)
-          (cachyNamed cachy.proton-cachyos.v10)
+          (cachyNamed cachy)
+          (cachyNamed cachy.v10)
 
           # Proton-GE
-          (geNamed ge.default)
+          (geNamed ge)
           (geNamed ge.v9)
           (geNamed ge.v10)
         ];
@@ -139,32 +151,37 @@
         inputs.steam-config-nix.nixosModules.default
         inputs.silentSDDM.nixosModules.default
 
-          { home-manager.extraSpecialArgs = { inherit inputs; };          
+        {
+          home-manager.extraSpecialArgs = {
+            inherit inputs;
+          };
 
+          # Noctalia Cachix
           nix.settings = {
-          extra-substituters = [
-          "https://noctalia.cachix.org"
-          ];
+            extra-substituters = [
+              "https://noctalia.cachix.org"
+            ];
 
-          extra-trusted-public-keys = [
-          "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
-          ];
-         };
-          
+            extra-trusted-public-keys = [
+              "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+            ];
+          };
 
+          # Overlays
           nixpkgs.overlays = [
             nix-cachyos-kernel.overlays.pinned
             inputs.millennium.overlays.default
           ];
-          
-          # Programs
+
+          # Steam compatibility tools
           programs.steam.extraCompatPackages =
-          steamCompatPackages;
-           
+            steamCompatPackages;
+
+          # Ski file manager
           programs.ski = {
-          enable = true;
-          defaultFileManager = true;
-          filePicker = true;
+            enable = true;
+            defaultFileManager = true;
+            filePicker = true;
           };
         }
       ];
@@ -198,9 +215,9 @@
           modules = [
             vice.nixosModules.default
             ./hosts/desktop/configuration.nix
-       
           ] ++ commonModules;
         };
       };
     };
 }
+
