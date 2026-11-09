@@ -3,7 +3,7 @@
 {
   users.users.moonwuzy = {
     isNormalUser = true;
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     description = "Moonwuzy";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = [ ];
@@ -21,16 +21,13 @@
     }
   ];
 
-  programs.zsh = {
+  programs.fish = {
     enable = true;
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
-    enableCompletion = true;
+
     shellAliases = {
       ll = "ls -lah";
       rebuild = "sudo nixos-rebuild switch";
     };
   };
-
   system.stateVersion = "26.05";
 }

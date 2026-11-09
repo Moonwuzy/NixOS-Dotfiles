@@ -16,7 +16,7 @@
     
     nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (pkgs.lib.getName pkg) [
-      "posy-cursors"
+      "posy-cursors"	
     ];
     
     gtk = {
@@ -50,7 +50,7 @@
       context.properties = {
         default.clock.rate = 48000
         default.clock.allowed-rates = [ 48000 ]
-        default.clock.quantum = 256
+        default.clock.quantum = 512
         default.clock.min-quantum = 128
         default.clock.max-quantum = 1024
       }
@@ -120,7 +120,6 @@
 
   programs.direnv = {
     enable = true;
-    enableZshIntegration = true;
     nix-direnv.enable = true;
   };
 

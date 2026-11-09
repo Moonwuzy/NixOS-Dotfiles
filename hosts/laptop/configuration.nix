@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware.nix
+    ../../modules/core/generations.nix
     ../../modules/core/boot.nix
     ../../modules/core/networking.nix
     ../../modules/core/nix.nix
@@ -24,6 +25,10 @@
 
   programs.umbriel.enable = true;
 
+  nixpkgs.config.problems.handlers = {
+  vice-clipper.buildPythonPackage-internal-unittestFlagsArray = "warn";
+  };
+  
   networking.hostName = "yaoilover";
 
   home-manager.users.moonwuzy = { inputs, ... }: {
@@ -49,7 +54,7 @@
           weatherInterval = 30;
         };
 
-        bar = {
+        bar = {:
           position = "top";
           style = "solid";
           width = 40;
@@ -147,6 +152,10 @@
 
       "kitty/kitty.conf".source =
         lib.mkForce ../../home/moonwuzy/.config/kitty/kitty.conf;
+
+      "fastfetch/config.json".source =
+      ../../home/moonwuzy/.config/fastfetch/config.json;
+
     };
   };
 

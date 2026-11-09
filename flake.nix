@@ -78,7 +78,8 @@
     ski = {
       url = "github:ilyamiro/Ski";
       flake = false;
-    };
+     };
+
   };
 
   outputs =

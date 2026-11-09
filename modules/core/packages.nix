@@ -1,194 +1,284 @@
-{ pkgs, inputs, ... }:
 
+{ pkgs, inputs, lib, ... }:
+
+let
+  system = pkgs.stdenv.hostPlatform.system;
+in
 {
+  # ============================================================
+  # HOME MANAGER
+  # ============================================================
+
   home-manager.users.moonwuzy.home.file.".config/fish/config.fish".source =
-  ../../home/moonwuzy/.config/fish/config.fish;
- 
-  home-manager.users.moonwuzy.home.packages = with pkgs; [
-    pywal
-    nirimod
-    blanket
-  ];
- 
-    environment.systemPackages = with pkgs; [
-    # My Packages
-    inputs.nixgram.packages.${pkgs.stdenv.hostPlatform.system}.default   
+    ../../home/moonwuzy/.config/fish/config.fish;
 
-    # Misc
+
+  # ============================================================
+  # SYSTEM SETTINGS
+  # ============================================================
+
+  # Disable Nano.
+  programs.nano.enable = false;
+
+  # Exclude XTerm from X server packages.
+  services.xserver.excludePackages = [ pkgs.xterm ];
+
+  # Disable the XTerm desktop manager.
+  services.xserver.desktopManager.xterm.enable = false;
+
+  # Remove NixOS default packages.
+  environment.defaultPackages = lib.mkForce [];
+
+
+  # ============================================================
+  # DEFAULT EDITOR
+  # ============================================================
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
+
+  environment.variables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+  };
+
+
+  # ============================================================
+  # SYSTEM PACKAGES
+  # ============================================================
+
+  environment.systemPackages = with pkgs; [
+
+    # ----------------------------------------------------------
+    # CUSTOM APPLICATIONS
+    # ----------------------------------------------------------
+
+    inputs.nixgram.packages.${system}.default
+
+
+    # ----------------------------------------------------------
+    # NETWORKING & DOWNLOADS
+    # ----------------------------------------------------------
+
     wget
-    rustfmt    
-
-    # Desktop
-    vivaldi
-    kitty
-    waybar
+    proton-vpn
+    qbittorrent
     discord
+    whatsapp-electron
+    gh
+
+
+    # ----------------------------------------------------------
+    # WEB BROWSERS
+    # ----------------------------------------------------------
+
+    vivaldi
+    inputs.zen-browser.packages.${system}.default
+
+
+    # ----------------------------------------------------------
+    # TERMINALS & SHELL UTILITIES
+    # ----------------------------------------------------------
+
+    kitty
+    ghostty
+    starship
+    fzf
+    zoxide
+    bat
+    eza
+    yazi
+    trash-cli
+    circumflex
+    btop
+    fastfetch
+    icu
+
+
+    # ----------------------------------------------------------
+    # WINDOW MANAGEMENT & DESKTOP
+    # ----------------------------------------------------------
+
+    waybar
     wofi
     eww
-    yazi
     wlogout
-    pavucontrol
+    autotiling
+    waypaper
+    mpvpaper
+    grim
+    slurp
+    wl-clipboard
     libnotify
-    ghostty
-    zenity
-    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-    qbittorrent
-    proton-vpn
-    heroic
+    papirus-icon-theme
+    gnome-themes-extra
+    catppuccin-sddm
+
+
+    # ----------------------------------------------------------
+    # AUDIO & MEDIA
+    # ----------------------------------------------------------
+
+    cmus
+    spotify
+    cava
+    mpv
+    easyeffects
+    ardour
+    
+
+
+    # ----------------------------------------------------------
+    # DEVELOPMENT & PROGRAMMING
+    # ----------------------------------------------------------
+
+    neovim
+    vscodium
+    git
+    rustfmt
+    rustc
+    cargo
+    gcc
+    gnumake
+    python3
+    nodejs
+    pnpm
+    godot
+    pkg-config
+    openssl
+
+
+    # ----------------------------------------------------------
+    # QT FRAMEWORK
+    # ----------------------------------------------------------
 
     qt6.qtdeclarative
     qt6.qt5compat
     qt6.qtsvg
     qt6.qtmultimedia
-    qt6.qtsvg
     qt6.qtvirtualkeyboard
-    qt6.qtmultimedia
     qt6.qtimageformats
 
-    # Media
-    cmus
-    mprisence
-    nicotine-plus
-    cava
-    mpv
-    spotify
-    spotatui
 
-    # Appearance
-    waypaper
-    papirus-icon-theme
-    gnome-themes-extra
-    catppuccin-sddm
+    # ----------------------------------------------------------
+    # FILE MANAGEMENT & ARCHIVES
+    # ----------------------------------------------------------
 
-    # Utilities
-    fastfetch
-    xdg-utils
-    autotiling
-    glib
-    grim
-    slurp
+    file-roller
+    p7zip
+    zip
     tumbler
     ffmpegthumbnailer
     loupe
-    p7zip
-    file-roller
+    xdg-utils
+    xdg-user-dirs
+    fuse-overlayfs
+
+
+    # ----------------------------------------------------------
+    # GAMING & EMULATION
+    # ----------------------------------------------------------
+
+    wineWow64Packages.stable
+    winetricks
+    protonplus
+    protontricks
+    heroic
+    faugus-launcher
+    itch
+    pcsx2
+    dolphin-emu
+    sameboy
+    ryubing
+    osu-lazer-bin
+    vulkan-loader
+    vulkan-tools
+    mangohud
+    mangojuice
+    unityhub
+    
+
+
+    # ----------------------------------------------------------
+    # GRAPHICS & CREATIVE APPLICATIONS
+    # ----------------------------------------------------------
+
+    krita
+    libva-utils
+    xdpyinfo
+
+
+    # ----------------------------------------------------------
+    # SYSTEM UTILITIES & HARDWARE
+    # ----------------------------------------------------------
+
+    procps
+    usbutils
     blueman
-    keepassxc
-    jq
-    wl-clipboard
-    emacs
+    alsa-lib
+    upower
+    mission-center
+    socat
+    cabextract
     ripgrep
     fd
-    neovim
-    vscodium
-    pnpm
-    nodejs
-    cargo
-    rustc
-    gcc
-    python3
-    gnumake
-    easyeffects
-    wayland-utils
-    mediawriter
-    mission-center
-    krita
-    usbutils
-    zip
-    gh
-    alsa-lib
-    openssl
-    pkg-config
+    jq
     libX11
     libXinerama
     libXcursor
     xinit
-
-    # Gaming
-    wineWow64Packages.stable
-    winetricks
-    protonplus
-    vulkan-loader
-    vulkan-tools
-    pcsx2
-    dolphin-emu
-    mangohud
-    mangojuice
-    itch
-    sameboy
-    protontricks
-    faugus-launcher
-    osu-lazer-bin
-
-    # Music
-    ardour
-
-    # Graphics / diagnostics
-    libva-utils
-    xdpyinfo
-
-    # Development
-    git
-    lazygit
-
-    # VR
-    unityhub
-    alcom
-   
-    whatsapp-electron
-    procps
-    cabextract
-    
-    # Terminal
-    circumflex
-    bat
-    eza
-    trash-cli
-    starship
-    fzf
-    zoxide 
-
+    glib
+    mediawriter
+    pavucontrol
+    nicotine-plus
+    keepassxc
+    wayland-utils
     ani-cli
     yt-dlp
     ani-skip
     patch
-    xdg-user-dirs
-    upower
-    socat
-    mpvpaper
-    btop
-    godot
-    fuse-overlayfs
-    ryubing
-
+    zstd
   ];
+
+
+  # ============================================================
+  # FONT CONFIGURATION
+  # ============================================================
 
   fonts = {
     fontDir.enable = true;
     enableGhostscriptFonts = true;
+
     packages = with pkgs; [
+
+      # General purpose fonts.
       cantarell-fonts
-      hack-font
       inter
-      jetbrains-mono
       liberation_ttf
-      monaspace
-      noto-fonts
       ubuntu-classic
 
-      nerd-fonts.fira-code
-      nerd-fonts.droid-sans-mono
-      nerd-fonts.jetbrains-mono
+      # Monospaced and programming fonts.
+      hack-font
+      jetbrains-mono
+      monaspace
 
+      # International and Unicode fonts.
+      noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
       noto-fonts-color-emoji
 
+      # Additional programming fonts.
       fira-code
       fira-code-symbols
       mplus-outline-fonts.githubRelease
       dina-font
       proggyfonts
-    ];
+
+    ] ++ builtins.filter lib.isDerivation
+      (builtins.attrValues pkgs.nerd-fonts);
   };
 }
+

@@ -13,4 +13,5 @@
   };
 
   # PipeWire xrun / crackling fix is applied through Home Manager in services.nix.
+  security.rtkit.enable = true;
 }

@@ -1,0 +1,78 @@
+
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd /etc/nixos
+
+latest=$(
+  curl -fsSL \
+    https://api.github.com/repos/zen-kernel/zen-kernel/releases?per_page=100 |
+    jq -r '
+      [.[] |
+        select(.tag_name |
+          test("^v[0-9]+\\.[0-9]+\\.[0-9]+-lqx[0-9]+$")
+        )
+      ] |
+      max_by(.published_at) |
+      .tag_name
+    '
+)
+
+current=$(
+  grep -oP 'github:zen-kernel/zen-kernel/\K[^"]+' flake.nix
+)
+
+if [[ "$latest" == "$current" ]]; then
+  echo "Already using latest Liquorix: $current"
+  exit 0
+fi
+
+echo "Updating Liquorix: $current -> $latest"
+
+backup=$(mktemp -d)
+cp flake.nix "$backup/flake.nix"
+cp flake.lock "$backup/flake.lock"
+
+restore() {
+  cp "$backup/flake.nix" flake.nix
+  cp "$backup/flake.lock" flake.lock
+  rm -rf "$backup"
+}
+
+trap restore ERR
+
+python3 - "$latest" <<'PY'
+import pathlib
+import re
+import sys
+
+tag = sys.argv[1]
+path = pathlib.Path("flake.nix")
+data = path.read_text()
+
+pattern = r'(lqx-kernel-src\s*=\s*\{\s*url\s*=\s*)"[^"]+"'
+updated, count = re.subn(
+    pattern,
+    lambda m: m.group(1) +
+    f'"github:zen-kernel/zen-kernel/{tag}"',
+    data,
+    count=1
+)
+
+if count != 1:
+    raise SystemExit("Could not locate lqx-kernel-src in flake.nix")
+
+path.write_text(updated)
+PY
+
+nix flake lock --update-input lqx-kernel-src
+
+# Build the complete desktop system, including NVIDIA.
+nix build .#nixosConfigurations.desktop.config.system.build.toplevel
+
+trap - ERR
+rm -rf "$backup"
+
+echo "Liquorix $latest built successfully."
+echo "Activate with: sudo nixos-rebuild switch --flake /etc/nixos#desktop"
+

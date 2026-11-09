@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware.nix
+    ../../modules/core/generations.nix
     ../../modules/core/boot.nix
     ../../modules/core/networking.nix
     ../../modules/core/nix.nix
@@ -27,6 +28,10 @@
   services.hardware.openrgb = {
     enable = true;
     motherboard = "amd";
+  };
+  
+  nixpkgs.config.problems.handlers = {
+  vice-clipper.buildPythonPackage-internal-unittestFlagsArray = "warn";
   };
 
   networking.firewall.trustedInterfaces = [ "eno1" ];
@@ -186,6 +191,10 @@
 
       "kitty/kitty.conf".source =
         lib.mkForce ../../home/moonwuzy/.config/kitty/kitty.conf;
+
+      "fastfetch/config.json".source =
+      ../../home/moonwuzy/.config/fastfetch/config.json;
+
     };
   };
 }
