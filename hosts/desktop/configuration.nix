@@ -17,9 +17,13 @@
     ../../modules/desktop/graphics.nix
     ../../modules/core/virtualization.nix
     ../../modules/core/vice.nix
+    ../../modules/core/system-usage.nix 
 
+    inputs.nix-gaming.nixosModules.platformOptimizations
     inputs.umbriel.nixosModules.default
   ];
+
+  programs.steam.platformOptimizations.enable = true;
 
   programs.umbriel.enable = true;
 
@@ -68,54 +72,9 @@
   };
 
   home-manager.users.moonwuzy = { inputs, ... }: {
-    imports = [
-      inputs.serpantinum.homeManagerModules.default
+    imports = [ 
       inputs.noctalia.homeModules.default
     ];
-
-    # Serpantinum
-    systemd.user.services.serpantinum.Service.Environment =
-      "QML2_IMPORT_PATH=${pkgs.qt6.qtdeclarative}/lib/qt-6/qml";
-
-    programs.serpantinum = {
-      enable = true;
-      systemd.enable = false;
-
-      settings = {
-        wallpaperDir = "/home/moonwuzy/Pictures/Wallpapers";
-
-        general = {
-          language = "en";
-          weatherUnit = "metric";
-          weatherInterval = 30;
-        };
-
-        bar = {
-          position = "top";
-          style = "solid";
-          width = 40;
-          workspaceCount = 10;
-
-          modules = {
-            left = [ "workspaces" ];
-            center = [ "time" ];
-            right = [ "tray" [ "kb" "wifi" "bt" "vol" "bat" ] ];
-          };
-        };
-
-        theme = {
-          fontFamily = "Adwaita Mono";
-          borderRadius = 12;
-          matugen = true;
-        };
-
-        notifications = {
-          dnd = false;
-          position = "top right";
-          sound = true;
-        };
-      };
-    };
   
   # Spelunkr
   xdg.desktopEntries.spelunkr = {
@@ -145,7 +104,7 @@
         };
       };
     };
-
+    
     home.sessionVariables = {
       NIXOS_OZONE_WL = "1";
     };

@@ -44,19 +44,23 @@ in
     VISUAL = "nvim";
   };
 
+    nixpkgs.config.permittedInsecurePackages = [
+    "qutebrowser-3.7.0"
+    ];
 
-  # ============================================================
-  # SYSTEM PACKAGES
-  # ============================================================
 
-  environment.systemPackages = with pkgs; [
+    # ============================================================
+    # SYSTEM PACKAGES
+    # ============================================================
+
+    environment.systemPackages = with pkgs; [
 
     # ----------------------------------------------------------
     # CUSTOM APPLICATIONS
     # ----------------------------------------------------------
 
     inputs.nixgram.packages.${system}.default
-
+    inputs.yapfast.packages.${pkgs.stdenv.hostPlatform.system}.yapfast
 
     # ----------------------------------------------------------
     # NETWORKING & DOWNLOADS
@@ -65,10 +69,7 @@ in
     wget
     proton-vpn
     qbittorrent
-    discord
-    whatsapp-electron
     gh
-
 
     # ----------------------------------------------------------
     # WEB BROWSERS
@@ -76,7 +77,7 @@ in
 
     vivaldi
     inputs.zen-browser.packages.${system}.default
-
+    qutebrowser
 
     # ----------------------------------------------------------
     # TERMINALS & SHELL UTILITIES
@@ -94,41 +95,30 @@ in
     circumflex
     btop
     fastfetch
-    icu
-
+    icu 
 
     # ----------------------------------------------------------
     # WINDOW MANAGEMENT & DESKTOP
     # ----------------------------------------------------------
-
-    waybar
-    wofi
-    eww
-    wlogout
-    autotiling
-    waypaper
-    mpvpaper
+    
     grim
     slurp
-    wl-clipboard
     libnotify
-    papirus-icon-theme
-    gnome-themes-extra
-    catppuccin-sddm
-
+    kanagawa-icon-theme
+    gnome-themes-extra 
 
     # ----------------------------------------------------------
     # AUDIO & MEDIA
     # ----------------------------------------------------------
 
+    discord
+    whatsapp-electron
     cmus
+    kew
     spotify
     cava
     mpv
     easyeffects
-    ardour
-    
-
 
     # ----------------------------------------------------------
     # DEVELOPMENT & PROGRAMMING
@@ -149,7 +139,6 @@ in
     pkg-config
     openssl
 
-
     # ----------------------------------------------------------
     # QT FRAMEWORK
     # ----------------------------------------------------------
@@ -160,7 +149,6 @@ in
     qt6.qtmultimedia
     qt6.qtvirtualkeyboard
     qt6.qtimageformats
-
 
     # ----------------------------------------------------------
     # FILE MANAGEMENT & ARCHIVES
@@ -175,7 +163,6 @@ in
     xdg-utils
     xdg-user-dirs
     fuse-overlayfs
-
 
     # ----------------------------------------------------------
     # GAMING & EMULATION
@@ -198,8 +185,6 @@ in
     mangohud
     mangojuice
     unityhub
-    
-
 
     # ----------------------------------------------------------
     # GRAPHICS & CREATIVE APPLICATIONS
@@ -209,14 +194,12 @@ in
     libva-utils
     xdpyinfo
 
-
     # ----------------------------------------------------------
     # SYSTEM UTILITIES & HARDWARE
     # ----------------------------------------------------------
 
     procps
-    usbutils
-    blueman
+    usbutils  
     alsa-lib
     upower
     mission-center
@@ -230,8 +213,6 @@ in
     libXcursor
     xinit
     glib
-    mediawriter
-    pavucontrol
     nicotine-plus
     keepassxc
     wayland-utils
@@ -240,6 +221,7 @@ in
     ani-skip
     patch
     zstd
+
   ];
 
 

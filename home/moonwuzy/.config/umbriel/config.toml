@@ -1,4 +1,3 @@
-
 # Includes
 
 [include]
@@ -17,10 +16,8 @@ xwayland_native_resolution = true
 nvidia_sync_workaround = true
 autostart = [
     "steam -silent",
-    "yapfast",
-    "vivaldi"
+    "yapfast" 
 ]
-
 
 # Appearance
 
@@ -45,22 +42,10 @@ layout = ""
 [input.touchpad]
 tap = true
 
-[input.cursor]
-
 # Keybinds
 
 [keybinds]
-
-# Applications and session
 "Mod+Return" = { action = "spawn kitty", repeat = false }
-"Mod" = "spawn noctalia msg panel-toggle launcher"
-"Mod+Q" = { action = "window-close", repeat = false }
-"Mod+Escape" = "session-quit"
-"Mod+Shift+Escape" = { action = "shortcuts-inhibit-toggle", allow_when_inhibited = true, repeat = false }
-"Mod+I" = { action = "spawn ~/.local/bin/nepu", repeat = false }
-"Ctrl+Alt+Delete" = { action = "spawn missioncenter", repeat = false }
-
-# Noctalia panels
 "Mod+D" = { action = "spawn noctalia msg panel-toggle launcher", repeat = false }
 "Mod+Y" = { action = "spawn noctalia msg panel-toggle wallpaper", repeat = false }
 "Mod+Shift+C" = { action = "spawn noctalia msg panel-toggle clipboard", repeat = false }
@@ -69,12 +54,16 @@ tap = true
 "Mod+N" = { action = "spawn noctalia msg panel-toggle control-center", repeat = false }
 "Mod+Shift+V" = { action = "spawn noctalia msg panel-toggle control-center audio", repeat = false }
 "Mod+Shift+S" = { action = "spawn noctalia msg panel-toggle mindnbytes/nix-status:details", repeat = false }
+"Mod+G" = { action = "spawn noctalia msg panel-toggle session", repeat = false }
+"Mod+Q" = { action = "window-close", repeat = false }
+"Mod+Escape" = "session-quit"
+"Mod+Shift+Escape" = { action = "shortcuts-inhibit-toggle", allow_when_inhibited = true, repeat = false }
+"Mod+I" = { action = "spawn ~/.local/bin/nepu", repeat = false }
+"Ctrl+Alt+Delete" = { action = "spawn missioncenter", repeat = false }
 
-# Screenshots
 "Print" = { action = "spawn noctalia msg screenshot-region", repeat = false }
 "Mod+Print" = { action = "spawn noctalia msg screenshot-fullscreen", repeat = false }
 
-# Media and brightness
 "XF86AudioRaiseVolume" = { action = "spawn noctalia msg volume-up", allow_when_locked = true }
 "XF86AudioLowerVolume" = { action = "spawn noctalia msg volume-down", allow_when_locked = true }
 "XF86AudioMute" = { action = "spawn noctalia msg volume-mute", allow_when_locked = true, repeat = false }
@@ -84,7 +73,6 @@ tap = true
 "XF86MonBrightnessUp" = { action = "spawn noctalia msg brightness-up", allow_when_locked = true }
 "XF86MonBrightnessDown" = { action = "spawn noctalia msg brightness-down", allow_when_locked = true }
 
-# Focus and movement
 "Mod+Left" = "window-focus-left"
 "Mod+Down" = "window-focus-down"
 "Mod+Up" = "window-focus-up"
@@ -99,7 +87,6 @@ tap = true
 "Mod+Shift+Up" = "window-move-up"
 "Mod+Shift+Right" = "column-move-right"
 
-# Window state and layout
 "Mod+Space" = { action = "window-toggle-floating", repeat = false }
 "Mod+Shift+T" = { action = "window-focus-switch-floating", repeat = false }
 "Mod+P" = { action = "window-toggle-pinned", repeat = false }
@@ -119,7 +106,6 @@ tap = true
 "Mod+WheelDown" = "window-focus-right"
 "Mod+O" = { action = "overview-toggle", repeat = false }
 
-# Workspaces
 "Mod+1" = "workspace-switch 1"
 "Mod+2" = "workspace-switch 2"
 "Mod+3" = "workspace-switch 3"
@@ -143,25 +129,21 @@ tap = true
 # Layout
 
 [layout]
-mode = "scrolling"
+mode = "master"
 gap = 22
-extent_presets = [0.25, 0.333, 0.5, 0.667]
 
-[layout.scrolling]
-default_extent_fraction = 0.5
-center_underfull_strip = true
-center_focused = "on_overflow"
-center_on_overview_select = false
+[layout.master]
+position = "left"
+default_width_fraction = 0.5
+new_on_top = true
+new_becomes_master = false
 
-
-# Window Rules
+# Window rules
 
 [[window_rule]]
 blur = true
 match.is_alone = true
-default_maximize = true
 
-# Startup application workspaces
 [[window_rule]]
 match.app_id = "^steam$"
 default_workspace = 4
@@ -174,7 +156,11 @@ default_workspace = 2
 match.app_id = "^vivaldi-stable$"
 default_workspace = 3
 
-# Noctalia windows
+[[window_rule]]
+match.app_id = "^kitty$"
+default_maximize = false
+default_floating_size = { width = 0.5, height = 0.5 }
+
 [[window_rule]]
 match.app_id = "^dev.noctalia.Noctalia$"
 default_floating = true
@@ -185,21 +171,19 @@ match.app_id = "^dev.noctalia.UmbrielSharePicker$"
 default_floating = true
 default_floating_size_px = { width = 800, height = 600 }
 
-# Picture-in-picture
 [[window_rule]]
 match.title = "^(Picture-in-Picture|Picture in picture)$"
 default_floating = true
 default_maximize = false
 default_position = { x = 20, y = 20, anchor = "bottom_right" }
 
-# Notifications
 [[window_rule]]
 match.title = "^notificationtoasts_.+_desktop"
 default_position = { x = 0, y = 0, anchor = "bottom_right" }
 default_focused = false
 default_pinned = true
 
-# Layer Rules
+# Layer rules
 
 [[layer_rule]]
 match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd|desktop-widget-[^\"]*)$"
@@ -223,34 +207,6 @@ action = "overview-open"
 [colors.border]
 focused = "#7AA3FFFF"
 
-# Outputs
-
-[output.DP-2]
-enabled = true
-mode = "2560x1440@180"
-scale = 1.0
-position = [2560, 0]
-vrr = "always"
-hdr = "off"
-sdr_white = 203.0
-transform = "normal"
-tearing = true
-direct_scanout = true
-workspaces = "dynamic"
-
-[output.DP-1]
-enabled = true
-mode = "2560x1440@170"
-scale = 1.0
-position = [0, 0]
-vrr = "always"
-hdr = "off"
-sdr_white = 203.0
-transform = "normal"
-tearing = true
-direct_scanout = true
-workspaces = "dynamic"
-
 # Animations
 
 [animation]
@@ -261,8 +217,6 @@ duration_ms = 6
 enabled = true
 scale = 0.6
 style = "slide"
-
-# Effects
 
 [effects]
 in_capture = false

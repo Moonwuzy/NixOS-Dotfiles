@@ -22,4 +22,11 @@ if status is-interactive
 
     # Path Fixe
     set -gx LD_LIBRARY_PATH /nix/store/w188i9aj0jn0x1r7c3f5dzahpq1nn5cl-libgpg-error-1.61/lib:$LD_LIBRARY_PATH
+    
+    # Fastfetch
+    function fastfetch
+      command clear
+      command fastfetch --config ~/.config/fastfetch/config.json $argv
+    end
+
 end

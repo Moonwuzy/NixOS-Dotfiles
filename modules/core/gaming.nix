@@ -8,7 +8,6 @@
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
-    package = pkgs.millennium-steam;
     fontPackages = with pkgs; [
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif

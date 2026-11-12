@@ -77,7 +77,12 @@
   services.gvfs.enable = true;
   services.tumbler.enable = true;
   services.gnome.gnome-keyring.enable = true;
-  services.lact.enable = true;
+  services.lact.enable = true; 
+  services.clamav = {
+    daemon.enable = true;
+    updater.enable = true;
+  };
+
    
   # Greeter
   users.groups.greeter = {};

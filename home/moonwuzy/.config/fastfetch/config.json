@@ -1,124 +1,80 @@
-
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
 
   "logo": {
-    "type": "data",
-    "source": "  /\\_/\\\\\n ( o.o )\n  > ^ <\n  NixOS",
+    "type": "auto",
     "padding": {
-      "top": 0,
-      "left": 1,
-      "right": 2
+      "top": 1,
+      "left": 2,
+      "right": 3
     }
   },
 
   "display": {
-    "separator": " 󰁔 "
+    "separator": "  ",
+    "color": {
+      "keys": "cyan",
+      "title": "cyan"
+    },
+    "key": {
+      "width": 18
+    }
   },
 
   "modules": [
+    "title",
+    "separator",
+
+    "os",
+    "host",
+    "kernel",
+    "uptime",
+
     {
-      "type": "title",
-      "format": "{user-name}@{host-name}"
-    },
-    {
-      "type": "separator"
-    },
-    {
-      "type": "os",
-      "key": "󰣇 OS"
-    },
-    {
-      "type": "host",
-      "key": "󰌢 Host"
-    },
-    {
-      "type": "kernel",
-      "key": "󰒋 LQX Kernel",
-      "format": "{release}"
-    },
-    {
-      "type": "uptime",
-      "key": "󰅐 Uptime"
+      "type": "packages",
+      "key": "Nix",
+      "format": "{nix-system} system / {nix-user} user"
     },
     {
       "type": "packages",
-      "key": "󰏖 Packages"
+      "key": "Flatpak",
+      "format": "{flatpak-system} system / {flatpak-user} user"
     },
     {
-      "type": "shell",
-      "key": "󰆍 Shell"
+      "type": "packages",
+      "key": "AppImage",
+      "format": "{appimage}"
     },
+
+    "break",
+
+    "wm",
+    "theme",
+    "icons",
+    "font",
+    "cursor",
+
+    "break",
+
+    "terminal",
+    "terminalfont",
+    "shell",
+
+    "break",
+
+    "cpu",
+    "gpu",
+    "memory",
+    "swap",
+    "disk",
+
     {
-      "type": "de",
-      "key": "󰧨 Desktop"
+      "type": "command",
+      "key": "Lifetime",
+      "text": "awk 'BEGIN { printf \"%.2f days\", (systime() - 1791240449) / 86400 }'"
     },
-    {
-      "type": "wm",
-      "key": "󱂬 Window Manager"
-    },
-    {
-      "type": "wmtheme",
-      "key": "󰉼 WM Theme"
-    },
-    {
-      "type": "theme",
-      "key": "󰉼 Theme"
-    },
-    {
-      "type": "icons",
-      "key": "󰀻 Icons"
-    },
-    {
-      "type": "font",
-      "key": "󰛖 Font"
-    },
-    {
-      "type": "cursor",
-      "key": "󰆿 Cursor"
-    },
-    {
-      "type": "terminal",
-      "key": "󰆍 Terminal"
-    },
-    {
-      "type": "terminalfont",
-      "key": "󰛖 Terminal Font"
-    },
-    {
-      "type": "cpu",
-      "key": "󰻠 CPU"
-    },
-    {
-      "type": "gpu",
-      "key": "󰢮 GPU"
-    },
-    {
-      "type": "memory",
-      "key": "󰍛 Memory"
-    },
-    {
-      "type": "swap",
-      "key": "󰓡 Swap"
-    },
-    {
-      "type": "battery",
-      "key": "󰁹 Battery"
-    },
-    {
-      "type": "poweradapter",
-      "key": "󰚥 Power"
-    },
-    {
-      "type": "locale",
-      "key": "󰗊 Locale"
-    },
-    {
-      "type": "break"
-    },
-    {
-      "type": "colors"
-    }
+
+    "break",
+    "colors"
   ]
 }
-
