@@ -66,6 +66,12 @@
       url = "github:yapfast/yapfast";
     };
 
+    # Steam Deck integration
+    jovian = {
+      url = "github:Jovian-Experiments/Jovian-NixOS";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =
@@ -145,6 +151,27 @@
             ./hosts/desktop/configuration.nix
           ] ++ commonModules;
         };
+	
+        # Steam Deck
+        steamdeck = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+
+          specialArgs = {
+            inherit inputs;
+          };
+
+	  modules = [
+	  inputs.jovian.nixosModules.default
+          home-manager.nixosModules.home-manager
+          ./hosts/steamdeck/configuration.nix
+          {
+          home-manager.extraSpecialArgs = {
+          inherit inputs;
+            };
+          }
+        ];
+       };
+       
       };
     };
 }
